@@ -1,0 +1,14 @@
+prefix=/Users/teitadashi/Desktop/source/DK-FFmpeg-Source/thin/arm64
+exec_prefix=${prefix}
+libdir=/Users/teitadashi/Desktop/source/DK-FFmpeg-Source/thin/arm64/lib
+includedir=/Users/teitadashi/Desktop/source/DK-FFmpeg-Source/thin/arm64/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.54.100
+Requires: libswresample >= 3.5.100, libavutil >= 56.31.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -liconv -lm -lz -framework AudioToolbox -L/usr/local/Cellar/fdk-aac/2.0.1/lib -lfdk-aac -lmp3lame -lm -L/usr/local/Cellar/x264/r3011/lib -lx264 -pthread -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo
+Libs.private: 
+Cflags: -I${includedir}
