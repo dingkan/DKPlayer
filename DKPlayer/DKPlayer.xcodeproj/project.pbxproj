@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AAFFB82324FD1A430081A2B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB82224FD1A430081A2B9 /* AppDelegate.m */; };
-		AAFFB82624FD1A430081A2B9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB82524FD1A430081A2B9 /* SceneDelegate.m */; };
 		AAFFB82924FD1A430081A2B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB82824FD1A430081A2B9 /* ViewController.m */; };
 		AAFFB82C24FD1A430081A2B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFFB82A24FD1A430081A2B9 /* Main.storyboard */; };
 		AAFFB82E24FD1A440081A2B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFFB82D24FD1A440081A2B9 /* Assets.xcassets */; };
@@ -32,6 +31,17 @@
 		AAFFB90F24FD1AA60081A2B9 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E324FD1AA60081A2B9 /* libavdevice.a */; };
 		AAFFB91024FD1AA60081A2B9 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E424FD1AA60081A2B9 /* libswresample.a */; };
 		AAFFB91124FD1AA70081A2B9 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E524FD1AA60081A2B9 /* libswscale.a */; };
+		D6579F3D24FE23B700ED1C9F /* DKPromise+Retry.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2624FE23B700ED1C9F /* DKPromise+Retry.m */; };
+		D6579F3E24FE23B700ED1C9F /* DKPromise+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2924FE23B700ED1C9F /* DKPromise+Delay.m */; };
+		D6579F3F24FE23B700ED1C9F /* DKPromise+Timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2B24FE23B700ED1C9F /* DKPromise+Timeout.m */; };
+		D6579F4024FE23B700ED1C9F /* DKPromise+Always.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2C24FE23B700ED1C9F /* DKPromise+Always.m */; };
+		D6579F4124FE23B700ED1C9F /* DKPromise+All.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2E24FE23B700ED1C9F /* DKPromise+All.m */; };
+		D6579F4224FE23B700ED1C9F /* DKPromise+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2F24FE23B700ED1C9F /* DKPromise+Async.m */; };
+		D6579F4324FE23B700ED1C9F /* DKPromise+Then.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3024FE23B700ED1C9F /* DKPromise+Then.m */; };
+		D6579F4424FE23B700ED1C9F /* DKPromise+Catch.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3124FE23B700ED1C9F /* DKPromise+Catch.m */; };
+		D6579F4524FE23B700ED1C9F /* DKPromise+Do.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3424FE23B700ED1C9F /* DKPromise+Do.m */; };
+		D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3724FE23B700ED1C9F /* DKPromise.m */; };
+		D6579F4724FE23B700ED1C9F /* DKPromise+Any.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3824FE23B700ED1C9F /* DKPromise+Any.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +65,6 @@
 		AAFFB81E24FD1A430081A2B9 /* DKPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFFB82124FD1A430081A2B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAFFB82224FD1A430081A2B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AAFFB82424FD1A430081A2B9 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		AAFFB82524FD1A430081A2B9 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		AAFFB82724FD1A430081A2B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AAFFB82824FD1A430081A2B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AAFFB82B24FD1A430081A2B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +209,29 @@
 		AAFFB8E324FD1AA60081A2B9 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
 		AAFFB8E424FD1AA60081A2B9 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		AAFFB8E524FD1AA60081A2B9 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		D6579F2624FE23B700ED1C9F /* DKPromise+Retry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Retry.m"; sourceTree = "<group>"; };
+		D6579F2724FE23B700ED1C9F /* DKPromise+Catch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Catch.h"; sourceTree = "<group>"; };
+		D6579F2824FE23B700ED1C9F /* DKPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPromise.h; sourceTree = "<group>"; };
+		D6579F2924FE23B700ED1C9F /* DKPromise+Delay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Delay.m"; sourceTree = "<group>"; };
+		D6579F2A24FE23B700ED1C9F /* DKPromise+Do.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Do.h"; sourceTree = "<group>"; };
+		D6579F2B24FE23B700ED1C9F /* DKPromise+Timeout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Timeout.m"; sourceTree = "<group>"; };
+		D6579F2C24FE23B700ED1C9F /* DKPromise+Always.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Always.m"; sourceTree = "<group>"; };
+		D6579F2D24FE23B700ED1C9F /* DKPromise+Any.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Any.h"; sourceTree = "<group>"; };
+		D6579F2E24FE23B700ED1C9F /* DKPromise+All.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+All.m"; sourceTree = "<group>"; };
+		D6579F2F24FE23B700ED1C9F /* DKPromise+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Async.m"; sourceTree = "<group>"; };
+		D6579F3024FE23B700ED1C9F /* DKPromise+Then.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Then.m"; sourceTree = "<group>"; };
+		D6579F3124FE23B700ED1C9F /* DKPromise+Catch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Catch.m"; sourceTree = "<group>"; };
+		D6579F3224FE23B700ED1C9F /* DKPromiseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPromiseHeader.h; sourceTree = "<group>"; };
+		D6579F3324FE23B700ED1C9F /* DKPromise+Retry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Retry.h"; sourceTree = "<group>"; };
+		D6579F3424FE23B700ED1C9F /* DKPromise+Do.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Do.m"; sourceTree = "<group>"; };
+		D6579F3524FE23B700ED1C9F /* DKPromise+Timeout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Timeout.h"; sourceTree = "<group>"; };
+		D6579F3624FE23B700ED1C9F /* DKPromise+Delay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Delay.h"; sourceTree = "<group>"; };
+		D6579F3724FE23B700ED1C9F /* DKPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPromise.m; sourceTree = "<group>"; };
+		D6579F3824FE23B700ED1C9F /* DKPromise+Any.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Any.m"; sourceTree = "<group>"; };
+		D6579F3924FE23B700ED1C9F /* DKPromise+Always.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Always.h"; sourceTree = "<group>"; };
+		D6579F3A24FE23B700ED1C9F /* DKPromise+Then.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Then.h"; sourceTree = "<group>"; };
+		D6579F3B24FE23B700ED1C9F /* DKPromise+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Async.h"; sourceTree = "<group>"; };
+		D6579F3C24FE23B700ED1C9F /* DKPromise+All.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+All.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,11 +290,10 @@
 		AAFFB82024FD1A430081A2B9 /* DKPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				D6579F2424FE23B000ED1C9F /* Tool */,
 				AAFFB85624FD1A8D0081A2B9 /* SDK */,
 				AAFFB82124FD1A430081A2B9 /* AppDelegate.h */,
 				AAFFB82224FD1A430081A2B9 /* AppDelegate.m */,
-				AAFFB82424FD1A430081A2B9 /* SceneDelegate.h */,
-				AAFFB82524FD1A430081A2B9 /* SceneDelegate.m */,
 				AAFFB82724FD1A430081A2B9 /* ViewController.h */,
 				AAFFB82824FD1A430081A2B9 /* ViewController.m */,
 				AAFFB82A24FD1A430081A2B9 /* Main.storyboard */,
@@ -527,6 +557,44 @@
 			path = pkgconfig;
 			sourceTree = "<group>";
 		};
+		D6579F2424FE23B000ED1C9F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D6579F2524FE23B700ED1C9F /* Promise */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		D6579F2524FE23B700ED1C9F /* Promise */ = {
+			isa = PBXGroup;
+			children = (
+				D6579F2824FE23B700ED1C9F /* DKPromise.h */,
+				D6579F3724FE23B700ED1C9F /* DKPromise.m */,
+				D6579F3C24FE23B700ED1C9F /* DKPromise+All.h */,
+				D6579F2E24FE23B700ED1C9F /* DKPromise+All.m */,
+				D6579F3924FE23B700ED1C9F /* DKPromise+Always.h */,
+				D6579F2C24FE23B700ED1C9F /* DKPromise+Always.m */,
+				D6579F2D24FE23B700ED1C9F /* DKPromise+Any.h */,
+				D6579F3824FE23B700ED1C9F /* DKPromise+Any.m */,
+				D6579F3B24FE23B700ED1C9F /* DKPromise+Async.h */,
+				D6579F2F24FE23B700ED1C9F /* DKPromise+Async.m */,
+				D6579F2724FE23B700ED1C9F /* DKPromise+Catch.h */,
+				D6579F3124FE23B700ED1C9F /* DKPromise+Catch.m */,
+				D6579F3624FE23B700ED1C9F /* DKPromise+Delay.h */,
+				D6579F2924FE23B700ED1C9F /* DKPromise+Delay.m */,
+				D6579F2A24FE23B700ED1C9F /* DKPromise+Do.h */,
+				D6579F3424FE23B700ED1C9F /* DKPromise+Do.m */,
+				D6579F3324FE23B700ED1C9F /* DKPromise+Retry.h */,
+				D6579F2624FE23B700ED1C9F /* DKPromise+Retry.m */,
+				D6579F3A24FE23B700ED1C9F /* DKPromise+Then.h */,
+				D6579F3024FE23B700ED1C9F /* DKPromise+Then.m */,
+				D6579F3524FE23B700ED1C9F /* DKPromise+Timeout.h */,
+				D6579F2B24FE23B700ED1C9F /* DKPromise+Timeout.m */,
+				D6579F3224FE23B700ED1C9F /* DKPromiseHeader.h */,
+			);
+			path = Promise;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -667,8 +735,18 @@
 			files = (
 				AAFFB82924FD1A430081A2B9 /* ViewController.m in Sources */,
 				AAFFB82324FD1A430081A2B9 /* AppDelegate.m in Sources */,
+				D6579F3F24FE23B700ED1C9F /* DKPromise+Timeout.m in Sources */,
+				D6579F4224FE23B700ED1C9F /* DKPromise+Async.m in Sources */,
+				D6579F4424FE23B700ED1C9F /* DKPromise+Catch.m in Sources */,
+				D6579F4524FE23B700ED1C9F /* DKPromise+Do.m in Sources */,
+				D6579F4724FE23B700ED1C9F /* DKPromise+Any.m in Sources */,
+				D6579F4124FE23B700ED1C9F /* DKPromise+All.m in Sources */,
 				AAFFB83424FD1A440081A2B9 /* main.m in Sources */,
-				AAFFB82624FD1A430081A2B9 /* SceneDelegate.m in Sources */,
+				D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */,
+				D6579F3D24FE23B700ED1C9F /* DKPromise+Retry.m in Sources */,
+				D6579F3E24FE23B700ED1C9F /* DKPromise+Delay.m in Sources */,
+				D6579F4024FE23B700ED1C9F /* DKPromise+Always.m in Sources */,
+				D6579F4324FE23B700ED1C9F /* DKPromise+Then.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
