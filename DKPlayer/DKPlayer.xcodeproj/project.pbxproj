@@ -42,6 +42,12 @@
 		D6579F4524FE23B700ED1C9F /* DKPromise+Do.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3424FE23B700ED1C9F /* DKPromise+Do.m */; };
 		D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3724FE23B700ED1C9F /* DKPromise.m */; };
 		D6579F4724FE23B700ED1C9F /* DKPromise+Any.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3824FE23B700ED1C9F /* DKPromise+Any.m */; };
+		D69A404A2508DCAF00657CDA /* WDZCallStackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A403E2508DCAF00657CDA /* WDZCallStackModel.m */; };
+		D69A404B2508DCAF00657CDA /* WDZCallDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A40402508DCAF00657CDA /* WDZCallDB.m */; };
+		D69A404C2508DCAF00657CDA /* WDZCPUMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A40422508DCAF00657CDA /* WDZCPUMonitor.m */; };
+		D69A404D2508DCAF00657CDA /* WDZCallTraceTimeCostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A40432508DCAF00657CDA /* WDZCallTraceTimeCostModel.m */; };
+		D69A404E2508DCAF00657CDA /* WDZCallLib.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A40452508DCAF00657CDA /* WDZCallLib.m */; };
+		D69A404F2508DCAF00657CDA /* WDZCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A40492508DCAF00657CDA /* WDZCallStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +238,18 @@
 		D6579F3A24FE23B700ED1C9F /* DKPromise+Then.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Then.h"; sourceTree = "<group>"; };
 		D6579F3B24FE23B700ED1C9F /* DKPromise+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Async.h"; sourceTree = "<group>"; };
 		D6579F3C24FE23B700ED1C9F /* DKPromise+All.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+All.h"; sourceTree = "<group>"; };
+		D69A403E2508DCAF00657CDA /* WDZCallStackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStackModel.m; sourceTree = "<group>"; };
+		D69A403F2508DCAF00657CDA /* WDZCallLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallLib.h; sourceTree = "<group>"; };
+		D69A40402508DCAF00657CDA /* WDZCallDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallDB.m; sourceTree = "<group>"; };
+		D69A40412508DCAF00657CDA /* WDZCallStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallStack.h; sourceTree = "<group>"; };
+		D69A40422508DCAF00657CDA /* WDZCPUMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCPUMonitor.m; sourceTree = "<group>"; };
+		D69A40432508DCAF00657CDA /* WDZCallTraceTimeCostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallTraceTimeCostModel.m; sourceTree = "<group>"; };
+		D69A40442508DCAF00657CDA /* WDZCallDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallDB.h; sourceTree = "<group>"; };
+		D69A40452508DCAF00657CDA /* WDZCallLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallLib.m; sourceTree = "<group>"; };
+		D69A40462508DCAF00657CDA /* WDZCallStackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallStackModel.h; sourceTree = "<group>"; };
+		D69A40472508DCAF00657CDA /* WDZCPUMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCPUMonitor.h; sourceTree = "<group>"; };
+		D69A40482508DCAF00657CDA /* WDZCallTraceTimeCostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTraceTimeCostModel.h; sourceTree = "<group>"; };
+		D69A40492508DCAF00657CDA /* WDZCallStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -560,6 +578,7 @@
 		D6579F2424FE23B000ED1C9F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				D69A403D2508DCAF00657CDA /* CPUMonitor */,
 				D6579F2524FE23B700ED1C9F /* Promise */,
 			);
 			path = Tool;
@@ -593,6 +612,25 @@
 				D6579F3224FE23B700ED1C9F /* DKPromiseHeader.h */,
 			);
 			path = Promise;
+			sourceTree = "<group>";
+		};
+		D69A403D2508DCAF00657CDA /* CPUMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				D69A403E2508DCAF00657CDA /* WDZCallStackModel.m */,
+				D69A403F2508DCAF00657CDA /* WDZCallLib.h */,
+				D69A40402508DCAF00657CDA /* WDZCallDB.m */,
+				D69A40412508DCAF00657CDA /* WDZCallStack.h */,
+				D69A40422508DCAF00657CDA /* WDZCPUMonitor.m */,
+				D69A40432508DCAF00657CDA /* WDZCallTraceTimeCostModel.m */,
+				D69A40442508DCAF00657CDA /* WDZCallDB.h */,
+				D69A40452508DCAF00657CDA /* WDZCallLib.m */,
+				D69A40462508DCAF00657CDA /* WDZCallStackModel.h */,
+				D69A40472508DCAF00657CDA /* WDZCPUMonitor.h */,
+				D69A40482508DCAF00657CDA /* WDZCallTraceTimeCostModel.h */,
+				D69A40492508DCAF00657CDA /* WDZCallStack.m */,
+			);
+			path = CPUMonitor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -744,7 +782,13 @@
 				AAFFB83424FD1A440081A2B9 /* main.m in Sources */,
 				D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */,
 				D6579F3D24FE23B700ED1C9F /* DKPromise+Retry.m in Sources */,
+				D69A404A2508DCAF00657CDA /* WDZCallStackModel.m in Sources */,
+				D69A404C2508DCAF00657CDA /* WDZCPUMonitor.m in Sources */,
 				D6579F3E24FE23B700ED1C9F /* DKPromise+Delay.m in Sources */,
+				D69A404B2508DCAF00657CDA /* WDZCallDB.m in Sources */,
+				D69A404E2508DCAF00657CDA /* WDZCallLib.m in Sources */,
+				D69A404F2508DCAF00657CDA /* WDZCallStack.m in Sources */,
+				D69A404D2508DCAF00657CDA /* WDZCallTraceTimeCostModel.m in Sources */,
 				D6579F4024FE23B700ED1C9F /* DKPromise+Always.m in Sources */,
 				D6579F4324FE23B700ED1C9F /* DKPromise+Then.m in Sources */,
 			);
