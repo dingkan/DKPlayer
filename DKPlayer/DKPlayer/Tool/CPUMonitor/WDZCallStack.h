@@ -7,6 +7,7 @@
 //  栈
 
 #import <Foundation/Foundation.h>
+#import "WDZCallLib.h"
 
 typedef enum : NSUInteger {
     kWDZStackTypeAll,
@@ -17,6 +18,10 @@ typedef enum : NSUInteger {
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WDZCallStack : NSObject
+
++(NSString *)callStackWithType:(kWDZStackType)type;
+
+extern NSString *wdzStackOfThread(thread_t thread);
 
 @end
 

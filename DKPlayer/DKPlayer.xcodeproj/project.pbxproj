@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66A87D108D8A3943240AC1F8 /* Pods_DKPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1E47485B15DC85096BD4B7 /* Pods_DKPlayer.framework */; };
 		AAFFB82324FD1A430081A2B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB82224FD1A430081A2B9 /* AppDelegate.m */; };
 		AAFFB82924FD1A430081A2B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB82824FD1A430081A2B9 /* ViewController.m */; };
 		AAFFB82C24FD1A430081A2B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFFB82A24FD1A430081A2B9 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		AAFFB90F24FD1AA60081A2B9 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E324FD1AA60081A2B9 /* libavdevice.a */; };
 		AAFFB91024FD1AA60081A2B9 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E424FD1AA60081A2B9 /* libswresample.a */; };
 		AAFFB91124FD1AA70081A2B9 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E524FD1AA60081A2B9 /* libswscale.a */; };
+		D64557662509FE6E00F16090 /* WDZLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D64557642509FE6E00F16090 /* WDZLagMonitor.m */; };
 		D6579F3D24FE23B700ED1C9F /* DKPromise+Retry.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2624FE23B700ED1C9F /* DKPromise+Retry.m */; };
 		D6579F3E24FE23B700ED1C9F /* DKPromise+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2924FE23B700ED1C9F /* DKPromise+Delay.m */; };
 		D6579F3F24FE23B700ED1C9F /* DKPromise+Timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2B24FE23B700ED1C9F /* DKPromise+Timeout.m */; };
@@ -68,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F1E47485B15DC85096BD4B7 /* Pods_DKPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFFB81E24FD1A430081A2B9 /* DKPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFFB82124FD1A430081A2B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAFFB82224FD1A430081A2B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -215,6 +218,10 @@
 		AAFFB8E324FD1AA60081A2B9 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
 		AAFFB8E424FD1AA60081A2B9 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		AAFFB8E524FD1AA60081A2B9 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		D457D1E4103795225FF01416 /* Pods-DKPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKPlayer.debug.xcconfig"; path = "Target Support Files/Pods-DKPlayer/Pods-DKPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		D61AF44873D316775FE07579 /* Pods-DKPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKPlayer.release.xcconfig"; path = "Target Support Files/Pods-DKPlayer/Pods-DKPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		D64557642509FE6E00F16090 /* WDZLagMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZLagMonitor.m; sourceTree = "<group>"; };
+		D64557652509FE6E00F16090 /* WDZLagMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZLagMonitor.h; sourceTree = "<group>"; };
 		D6579F2624FE23B700ED1C9F /* DKPromise+Retry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Retry.m"; sourceTree = "<group>"; };
 		D6579F2724FE23B700ED1C9F /* DKPromise+Catch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Catch.h"; sourceTree = "<group>"; };
 		D6579F2824FE23B700ED1C9F /* DKPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPromise.h; sourceTree = "<group>"; };
@@ -265,6 +272,7 @@
 				AAFFB90F24FD1AA60081A2B9 /* libavdevice.a in Frameworks */,
 				AAFFB91024FD1AA60081A2B9 /* libswresample.a in Frameworks */,
 				AAFFB90C24FD1AA60081A2B9 /* libavcodec.a in Frameworks */,
+				66A87D108D8A3943240AC1F8 /* Pods_DKPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +293,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D363136F9CC268AB2679740 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D457D1E4103795225FF01416 /* Pods-DKPlayer.debug.xcconfig */,
+				D61AF44873D316775FE07579 /* Pods-DKPlayer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		62CCC14360D0EA0762DCB98C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F1E47485B15DC85096BD4B7 /* Pods_DKPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AAFFB81524FD1A430081A2B9 = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +317,8 @@
 				AAFFB83C24FD1A450081A2B9 /* DKPlayerTests */,
 				AAFFB84724FD1A450081A2B9 /* DKPlayerUITests */,
 				AAFFB81F24FD1A430081A2B9 /* Products */,
+				4D363136F9CC268AB2679740 /* Pods */,
+				62CCC14360D0EA0762DCB98C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -617,18 +644,20 @@
 		D69A403D2508DCAF00657CDA /* CPUMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				D69A403E2508DCAF00657CDA /* WDZCallStackModel.m */,
-				D69A403F2508DCAF00657CDA /* WDZCallLib.h */,
-				D69A40402508DCAF00657CDA /* WDZCallDB.m */,
-				D69A40412508DCAF00657CDA /* WDZCallStack.h */,
-				D69A40422508DCAF00657CDA /* WDZCPUMonitor.m */,
-				D69A40432508DCAF00657CDA /* WDZCallTraceTimeCostModel.m */,
 				D69A40442508DCAF00657CDA /* WDZCallDB.h */,
+				D69A40402508DCAF00657CDA /* WDZCallDB.m */,
+				D69A403F2508DCAF00657CDA /* WDZCallLib.h */,
 				D69A40452508DCAF00657CDA /* WDZCallLib.m */,
-				D69A40462508DCAF00657CDA /* WDZCallStackModel.h */,
-				D69A40472508DCAF00657CDA /* WDZCPUMonitor.h */,
-				D69A40482508DCAF00657CDA /* WDZCallTraceTimeCostModel.h */,
+				D69A40412508DCAF00657CDA /* WDZCallStack.h */,
 				D69A40492508DCAF00657CDA /* WDZCallStack.m */,
+				D69A40462508DCAF00657CDA /* WDZCallStackModel.h */,
+				D69A403E2508DCAF00657CDA /* WDZCallStackModel.m */,
+				D69A40482508DCAF00657CDA /* WDZCallTraceTimeCostModel.h */,
+				D69A40432508DCAF00657CDA /* WDZCallTraceTimeCostModel.m */,
+				D69A40472508DCAF00657CDA /* WDZCPUMonitor.h */,
+				D69A40422508DCAF00657CDA /* WDZCPUMonitor.m */,
+				D64557652509FE6E00F16090 /* WDZLagMonitor.h */,
+				D64557642509FE6E00F16090 /* WDZLagMonitor.m */,
 			);
 			path = CPUMonitor;
 			sourceTree = "<group>";
@@ -640,9 +669,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAFFB84D24FD1A450081A2B9 /* Build configuration list for PBXNativeTarget "DKPlayer" */;
 			buildPhases = (
+				6D7FE5A8617AC870B1C42299 /* [CP] Check Pods Manifest.lock */,
 				AAFFB81A24FD1A430081A2B9 /* Sources */,
 				AAFFB81B24FD1A430081A2B9 /* Frameworks */,
 				AAFFB81C24FD1A430081A2B9 /* Resources */,
+				7D5ECD895F9B8A96898CD09A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -766,6 +797,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D7FE5A8617AC870B1C42299 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DKPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D5ECD895F9B8A96898CD09A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DKPlayer/Pods-DKPlayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DKPlayer/Pods-DKPlayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DKPlayer/Pods-DKPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAFFB81A24FD1A430081A2B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -777,6 +850,7 @@
 				D6579F4224FE23B700ED1C9F /* DKPromise+Async.m in Sources */,
 				D6579F4424FE23B700ED1C9F /* DKPromise+Catch.m in Sources */,
 				D6579F4524FE23B700ED1C9F /* DKPromise+Do.m in Sources */,
+				D64557662509FE6E00F16090 /* WDZLagMonitor.m in Sources */,
 				D6579F4724FE23B700ED1C9F /* DKPromise+Any.m in Sources */,
 				D6579F4124FE23B700ED1C9F /* DKPromise+All.m in Sources */,
 				AAFFB83424FD1A440081A2B9 /* main.m in Sources */,
@@ -957,6 +1031,7 @@
 		};
 		AAFFB84E24FD1A450081A2B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D457D1E4103795225FF01416 /* Pods-DKPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -978,6 +1053,7 @@
 		};
 		AAFFB84F24FD1A450081A2B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D61AF44873D316775FE07579 /* Pods-DKPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

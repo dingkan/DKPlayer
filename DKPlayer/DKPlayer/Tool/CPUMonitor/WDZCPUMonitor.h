@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WDZCPUMonitor : NSObject
 
++(void)updateCPU;
+
 @end
 
 NS_ASSUME_NONNULL_END
