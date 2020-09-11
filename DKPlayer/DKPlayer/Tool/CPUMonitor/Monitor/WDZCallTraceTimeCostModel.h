@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL lastCell;
 @property (nonatomic, assign) NSUInteger frequency;
 
-@property (nonatomic, strong) NSArray <WDZCallTraceTimeCostModel *>*subCosts;
+@property (nonatomic, strong) NSMutableArray <WDZCallTraceTimeCostModel *>*subCosts;
 
 -(NSString *)des;
 

@@ -28,13 +28,16 @@
 
 -(instancetype)init{
     if (self = [super init]) {
-        _clsCallDBPath = [PATH_OF_DOCUMENT stringByAppendingFormat:@"cls.sqlite"];
+        _clsCallDBPath = [PATH_OF_DOCUMENT stringByAppendingFormat:@"/cls.sqlite"];
         if ([[NSFileManager defaultManager] isExecutableFileAtPath:_clsCallDBPath] == NO) {
             FMDatabase *db = [[FMDatabase alloc]initWithPath:_clsCallDBPath];
             if ([db open]) {
                 //方法读取频次表
                 NSString *createSql = @"create table clscall (cid INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL, fid integer, cls text, mtd text, path text, timecost double, calldepth integer, frequency integer, lastcall integer)";
-                [db executeQuery:createSql];
+                FMResultSet *set = [db executeQuery:createSql];
+                if ([set next]) {
+                    
+                }
                 
                 //表记录
                 NSString *createStackSql = @"create table stack (sid INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL, stackcontent text,isstuck integer, insertdate double)";
@@ -140,8 +143,7 @@
         
         FMDatabase *db = [FMDatabase databaseWithPath:self.clsCallDBPath];
         if ([db open]) {
-            
-            FMResultSet *set = [db executeQuery:@"select * from clscall where lastcall=? order by frequency desc limit ?,50", @1, @(page * 50)];
+            FMResultSet *set = [db executeQuery:@"select * from clscall where lastcall=? order by frequency desc limit ? , 50", @1, @(page * 50)];
             NSUInteger count = 0;
             NSMutableArray *array = [NSMutableArray array];
             if ([set next]) {

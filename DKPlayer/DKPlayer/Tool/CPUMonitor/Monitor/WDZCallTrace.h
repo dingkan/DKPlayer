@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WDZCallTrace : NSObject
 
-+(void)strat;
++(void)start;
 +(void)startWithMaxDepth:(int)depth;
 +(void)startWithMinCost:(double)ms;
 +(void)startWithMaxDepth:(int)depth minCost:(double)ms;

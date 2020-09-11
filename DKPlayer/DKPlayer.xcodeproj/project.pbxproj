@@ -32,7 +32,6 @@
 		AAFFB90F24FD1AA60081A2B9 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E324FD1AA60081A2B9 /* libavdevice.a */; };
 		AAFFB91024FD1AA60081A2B9 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E424FD1AA60081A2B9 /* libswresample.a */; };
 		AAFFB91124FD1AA70081A2B9 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E524FD1AA60081A2B9 /* libswscale.a */; };
-		D64557662509FE6E00F16090 /* WDZLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D64557642509FE6E00F16090 /* WDZLagMonitor.m */; };
 		D6579F3D24FE23B700ED1C9F /* DKPromise+Retry.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2624FE23B700ED1C9F /* DKPromise+Retry.m */; };
 		D6579F3E24FE23B700ED1C9F /* DKPromise+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2924FE23B700ED1C9F /* DKPromise+Delay.m */; };
 		D6579F3F24FE23B700ED1C9F /* DKPromise+Timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2B24FE23B700ED1C9F /* DKPromise+Timeout.m */; };
@@ -44,12 +43,20 @@
 		D6579F4524FE23B700ED1C9F /* DKPromise+Do.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3424FE23B700ED1C9F /* DKPromise+Do.m */; };
 		D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3724FE23B700ED1C9F /* DKPromise.m */; };
 		D6579F4724FE23B700ED1C9F /* DKPromise+Any.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3824FE23B700ED1C9F /* DKPromise+Any.m */; };
-		D69A404A2508DCAF00657CDA /* WDZCallStackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A403E2508DCAF00657CDA /* WDZCallStackModel.m */; };
-		D69A404B2508DCAF00657CDA /* WDZCallDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A40402508DCAF00657CDA /* WDZCallDB.m */; };
-		D69A404C2508DCAF00657CDA /* WDZCPUMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A40422508DCAF00657CDA /* WDZCPUMonitor.m */; };
-		D69A404D2508DCAF00657CDA /* WDZCallTraceTimeCostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A40432508DCAF00657CDA /* WDZCallTraceTimeCostModel.m */; };
-		D69A404E2508DCAF00657CDA /* WDZCallLib.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A40452508DCAF00657CDA /* WDZCallLib.m */; };
-		D69A404F2508DCAF00657CDA /* WDZCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D69A40492508DCAF00657CDA /* WDZCallStack.m */; };
+		D665CECF250B2233007D98D5 /* WDZCallStackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEBB250B2233007D98D5 /* WDZCallStackModel.m */; };
+		D665CED0250B2233007D98D5 /* WDZCallDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEBD250B2233007D98D5 /* WDZCallDB.m */; };
+		D665CED1250B2233007D98D5 /* WDZCPUMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEBF250B2233007D98D5 /* WDZCPUMonitor.m */; };
+		D665CED2250B2233007D98D5 /* WDZCallTraceTimeCostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEC0250B2233007D98D5 /* WDZCallTraceTimeCostModel.m */; };
+		D665CED3250B2233007D98D5 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = D665CEC1250B2233007D98D5 /* fishhook.c */; };
+		D665CED4250B2233007D98D5 /* WDZCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = D665CEC4250B2233007D98D5 /* WDZCallTraceCore.c */; };
+		D665CED5250B2233007D98D5 /* WDZCallLib.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEC6250B2233007D98D5 /* WDZCallLib.m */; };
+		D665CED6250B2233007D98D5 /* WDZCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CECB250B2233007D98D5 /* WDZCallStack.m */; };
+		D665CED7250B2233007D98D5 /* WDZCallTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CECC250B2233007D98D5 /* WDZCallTrace.m */; };
+		D665CED8250B2233007D98D5 /* WDZLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CECD250B2233007D98D5 /* WDZLagMonitor.m */; };
+		D665CEDB250B3E60007D98D5 /* WDZStackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEDA250B3E60007D98D5 /* WDZStackCell.m */; };
+		D665CEE0250B3EF9007D98D5 /* WDZClsCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEDC250B3EF9007D98D5 /* WDZClsCallViewController.m */; };
+		D665CEE1250B3EF9007D98D5 /* WDZStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEDD250B3EF9007D98D5 /* WDZStackViewController.m */; };
+		D665CEE4250B3F37007D98D5 /* WDZClsCallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEE2250B3F37007D98D5 /* WDZClsCallCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,8 +227,6 @@
 		AAFFB8E524FD1AA60081A2B9 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
 		D457D1E4103795225FF01416 /* Pods-DKPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKPlayer.debug.xcconfig"; path = "Target Support Files/Pods-DKPlayer/Pods-DKPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		D61AF44873D316775FE07579 /* Pods-DKPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKPlayer.release.xcconfig"; path = "Target Support Files/Pods-DKPlayer/Pods-DKPlayer.release.xcconfig"; sourceTree = "<group>"; };
-		D64557642509FE6E00F16090 /* WDZLagMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZLagMonitor.m; sourceTree = "<group>"; };
-		D64557652509FE6E00F16090 /* WDZLagMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZLagMonitor.h; sourceTree = "<group>"; };
 		D6579F2624FE23B700ED1C9F /* DKPromise+Retry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Retry.m"; sourceTree = "<group>"; };
 		D6579F2724FE23B700ED1C9F /* DKPromise+Catch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Catch.h"; sourceTree = "<group>"; };
 		D6579F2824FE23B700ED1C9F /* DKPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPromise.h; sourceTree = "<group>"; };
@@ -245,18 +250,34 @@
 		D6579F3A24FE23B700ED1C9F /* DKPromise+Then.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Then.h"; sourceTree = "<group>"; };
 		D6579F3B24FE23B700ED1C9F /* DKPromise+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Async.h"; sourceTree = "<group>"; };
 		D6579F3C24FE23B700ED1C9F /* DKPromise+All.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+All.h"; sourceTree = "<group>"; };
-		D69A403E2508DCAF00657CDA /* WDZCallStackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStackModel.m; sourceTree = "<group>"; };
-		D69A403F2508DCAF00657CDA /* WDZCallLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallLib.h; sourceTree = "<group>"; };
-		D69A40402508DCAF00657CDA /* WDZCallDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallDB.m; sourceTree = "<group>"; };
-		D69A40412508DCAF00657CDA /* WDZCallStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallStack.h; sourceTree = "<group>"; };
-		D69A40422508DCAF00657CDA /* WDZCPUMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCPUMonitor.m; sourceTree = "<group>"; };
-		D69A40432508DCAF00657CDA /* WDZCallTraceTimeCostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallTraceTimeCostModel.m; sourceTree = "<group>"; };
-		D69A40442508DCAF00657CDA /* WDZCallDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallDB.h; sourceTree = "<group>"; };
-		D69A40452508DCAF00657CDA /* WDZCallLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallLib.m; sourceTree = "<group>"; };
-		D69A40462508DCAF00657CDA /* WDZCallStackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallStackModel.h; sourceTree = "<group>"; };
-		D69A40472508DCAF00657CDA /* WDZCPUMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCPUMonitor.h; sourceTree = "<group>"; };
-		D69A40482508DCAF00657CDA /* WDZCallTraceTimeCostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTraceTimeCostModel.h; sourceTree = "<group>"; };
-		D69A40492508DCAF00657CDA /* WDZCallStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStack.m; sourceTree = "<group>"; };
+		D665CEBA250B2233007D98D5 /* WDZCallTraceCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTraceCore.h; sourceTree = "<group>"; };
+		D665CEBB250B2233007D98D5 /* WDZCallStackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStackModel.m; sourceTree = "<group>"; };
+		D665CEBC250B2233007D98D5 /* WDZCallLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallLib.h; sourceTree = "<group>"; };
+		D665CEBD250B2233007D98D5 /* WDZCallDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallDB.m; sourceTree = "<group>"; };
+		D665CEBE250B2233007D98D5 /* WDZCallStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallStack.h; sourceTree = "<group>"; };
+		D665CEBF250B2233007D98D5 /* WDZCPUMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCPUMonitor.m; sourceTree = "<group>"; };
+		D665CEC0250B2233007D98D5 /* WDZCallTraceTimeCostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallTraceTimeCostModel.m; sourceTree = "<group>"; };
+		D665CEC1250B2233007D98D5 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		D665CEC2250B2233007D98D5 /* WDZLagMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZLagMonitor.h; sourceTree = "<group>"; };
+		D665CEC3250B2233007D98D5 /* WDZCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTrace.h; sourceTree = "<group>"; };
+		D665CEC4250B2233007D98D5 /* WDZCallTraceCore.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WDZCallTraceCore.c; sourceTree = "<group>"; };
+		D665CEC5250B2233007D98D5 /* WDZCallDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallDB.h; sourceTree = "<group>"; };
+		D665CEC6250B2233007D98D5 /* WDZCallLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallLib.m; sourceTree = "<group>"; };
+		D665CEC7250B2233007D98D5 /* WDZCallStackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallStackModel.h; sourceTree = "<group>"; };
+		D665CEC8250B2233007D98D5 /* WDZCPUMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCPUMonitor.h; sourceTree = "<group>"; };
+		D665CEC9250B2233007D98D5 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		D665CECA250B2233007D98D5 /* WDZCallTraceTimeCostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTraceTimeCostModel.h; sourceTree = "<group>"; };
+		D665CECB250B2233007D98D5 /* WDZCallStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStack.m; sourceTree = "<group>"; };
+		D665CECC250B2233007D98D5 /* WDZCallTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallTrace.m; sourceTree = "<group>"; };
+		D665CECD250B2233007D98D5 /* WDZLagMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZLagMonitor.m; sourceTree = "<group>"; };
+		D665CED9250B3E60007D98D5 /* WDZStackCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDZStackCell.h; sourceTree = "<group>"; };
+		D665CEDA250B3E60007D98D5 /* WDZStackCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDZStackCell.m; sourceTree = "<group>"; };
+		D665CEDC250B3EF9007D98D5 /* WDZClsCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZClsCallViewController.m; sourceTree = "<group>"; };
+		D665CEDD250B3EF9007D98D5 /* WDZStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZStackViewController.m; sourceTree = "<group>"; };
+		D665CEDE250B3EF9007D98D5 /* WDZClsCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZClsCallViewController.h; sourceTree = "<group>"; };
+		D665CEDF250B3EF9007D98D5 /* WDZStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZStackViewController.h; sourceTree = "<group>"; };
+		D665CEE2250B3F37007D98D5 /* WDZClsCallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZClsCallCell.m; sourceTree = "<group>"; };
+		D665CEE3250B3F37007D98D5 /* WDZClsCallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZClsCallCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -641,23 +662,53 @@
 			path = Promise;
 			sourceTree = "<group>";
 		};
+		D665CEB9250B2233007D98D5 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				D665CEC1250B2233007D98D5 /* fishhook.c */,
+				D665CEC9250B2233007D98D5 /* fishhook.h */,
+				D665CEC5250B2233007D98D5 /* WDZCallDB.h */,
+				D665CEBD250B2233007D98D5 /* WDZCallDB.m */,
+				D665CEBC250B2233007D98D5 /* WDZCallLib.h */,
+				D665CEC6250B2233007D98D5 /* WDZCallLib.m */,
+				D665CEBE250B2233007D98D5 /* WDZCallStack.h */,
+				D665CECB250B2233007D98D5 /* WDZCallStack.m */,
+				D665CEC7250B2233007D98D5 /* WDZCallStackModel.h */,
+				D665CEBB250B2233007D98D5 /* WDZCallStackModel.m */,
+				D665CEC3250B2233007D98D5 /* WDZCallTrace.h */,
+				D665CECC250B2233007D98D5 /* WDZCallTrace.m */,
+				D665CEC4250B2233007D98D5 /* WDZCallTraceCore.c */,
+				D665CEBA250B2233007D98D5 /* WDZCallTraceCore.h */,
+				D665CECA250B2233007D98D5 /* WDZCallTraceTimeCostModel.h */,
+				D665CEC0250B2233007D98D5 /* WDZCallTraceTimeCostModel.m */,
+				D665CEC8250B2233007D98D5 /* WDZCPUMonitor.h */,
+				D665CEBF250B2233007D98D5 /* WDZCPUMonitor.m */,
+				D665CEC2250B2233007D98D5 /* WDZLagMonitor.h */,
+				D665CECD250B2233007D98D5 /* WDZLagMonitor.m */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		D665CECE250B2233007D98D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D665CEE3250B3F37007D98D5 /* WDZClsCallCell.h */,
+				D665CEE2250B3F37007D98D5 /* WDZClsCallCell.m */,
+				D665CEDE250B3EF9007D98D5 /* WDZClsCallViewController.h */,
+				D665CEDC250B3EF9007D98D5 /* WDZClsCallViewController.m */,
+				D665CEDF250B3EF9007D98D5 /* WDZStackViewController.h */,
+				D665CEDD250B3EF9007D98D5 /* WDZStackViewController.m */,
+				D665CED9250B3E60007D98D5 /* WDZStackCell.h */,
+				D665CEDA250B3E60007D98D5 /* WDZStackCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D69A403D2508DCAF00657CDA /* CPUMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				D69A40442508DCAF00657CDA /* WDZCallDB.h */,
-				D69A40402508DCAF00657CDA /* WDZCallDB.m */,
-				D69A403F2508DCAF00657CDA /* WDZCallLib.h */,
-				D69A40452508DCAF00657CDA /* WDZCallLib.m */,
-				D69A40412508DCAF00657CDA /* WDZCallStack.h */,
-				D69A40492508DCAF00657CDA /* WDZCallStack.m */,
-				D69A40462508DCAF00657CDA /* WDZCallStackModel.h */,
-				D69A403E2508DCAF00657CDA /* WDZCallStackModel.m */,
-				D69A40482508DCAF00657CDA /* WDZCallTraceTimeCostModel.h */,
-				D69A40432508DCAF00657CDA /* WDZCallTraceTimeCostModel.m */,
-				D69A40472508DCAF00657CDA /* WDZCPUMonitor.h */,
-				D69A40422508DCAF00657CDA /* WDZCPUMonitor.m */,
-				D64557652509FE6E00F16090 /* WDZLagMonitor.h */,
-				D64557642509FE6E00F16090 /* WDZLagMonitor.m */,
+				D665CEB9250B2233007D98D5 /* Monitor */,
+				D665CECE250B2233007D98D5 /* View */,
 			);
 			path = CPUMonitor;
 			sourceTree = "<group>";
@@ -845,26 +896,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAFFB82924FD1A430081A2B9 /* ViewController.m in Sources */,
+				D665CEE0250B3EF9007D98D5 /* WDZClsCallViewController.m in Sources */,
+				D665CECF250B2233007D98D5 /* WDZCallStackModel.m in Sources */,
+				D665CED4250B2233007D98D5 /* WDZCallTraceCore.c in Sources */,
 				AAFFB82324FD1A430081A2B9 /* AppDelegate.m in Sources */,
 				D6579F3F24FE23B700ED1C9F /* DKPromise+Timeout.m in Sources */,
 				D6579F4224FE23B700ED1C9F /* DKPromise+Async.m in Sources */,
 				D6579F4424FE23B700ED1C9F /* DKPromise+Catch.m in Sources */,
+				D665CEDB250B3E60007D98D5 /* WDZStackCell.m in Sources */,
+				D665CED2250B2233007D98D5 /* WDZCallTraceTimeCostModel.m in Sources */,
+				D665CED7250B2233007D98D5 /* WDZCallTrace.m in Sources */,
 				D6579F4524FE23B700ED1C9F /* DKPromise+Do.m in Sources */,
-				D64557662509FE6E00F16090 /* WDZLagMonitor.m in Sources */,
+				D665CEE4250B3F37007D98D5 /* WDZClsCallCell.m in Sources */,
 				D6579F4724FE23B700ED1C9F /* DKPromise+Any.m in Sources */,
 				D6579F4124FE23B700ED1C9F /* DKPromise+All.m in Sources */,
 				AAFFB83424FD1A440081A2B9 /* main.m in Sources */,
 				D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */,
 				D6579F3D24FE23B700ED1C9F /* DKPromise+Retry.m in Sources */,
-				D69A404A2508DCAF00657CDA /* WDZCallStackModel.m in Sources */,
-				D69A404C2508DCAF00657CDA /* WDZCPUMonitor.m in Sources */,
+				D665CED6250B2233007D98D5 /* WDZCallStack.m in Sources */,
 				D6579F3E24FE23B700ED1C9F /* DKPromise+Delay.m in Sources */,
-				D69A404B2508DCAF00657CDA /* WDZCallDB.m in Sources */,
-				D69A404E2508DCAF00657CDA /* WDZCallLib.m in Sources */,
-				D69A404F2508DCAF00657CDA /* WDZCallStack.m in Sources */,
-				D69A404D2508DCAF00657CDA /* WDZCallTraceTimeCostModel.m in Sources */,
+				D665CED3250B2233007D98D5 /* fishhook.c in Sources */,
+				D665CED8250B2233007D98D5 /* WDZLagMonitor.m in Sources */,
+				D665CED5250B2233007D98D5 /* WDZCallLib.m in Sources */,
 				D6579F4024FE23B700ED1C9F /* DKPromise+Always.m in Sources */,
+				D665CED0250B2233007D98D5 /* WDZCallDB.m in Sources */,
 				D6579F4324FE23B700ED1C9F /* DKPromise+Then.m in Sources */,
+				D665CEE1250B3EF9007D98D5 /* WDZStackViewController.m in Sources */,
+				D665CED1250B2233007D98D5 /* WDZCPUMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,7 +1027,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1021,7 +1079,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

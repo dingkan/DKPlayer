@@ -2,6 +2,8 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - Masonry (1.1.0)
+  - MJRefresh (3.4.3)
   - ReactiveCocoa (2.3):
     - ReactiveCocoa/UI (= 2.3)
   - ReactiveCocoa/Core (2.3):
@@ -12,17 +14,23 @@ PODS:
 
 DEPENDENCIES:
   - FMDB
+  - Masonry
+  - MJRefresh
   - ReactiveCocoa (= 2.3)
 
 SPEC REPOS:
   trunk:
     - FMDB
+    - Masonry
+    - MJRefresh
     - ReactiveCocoa
 
 SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   ReactiveCocoa: 81ee2fb7df2dfc6bd52b5d70473662195e20ca7d
 
-PODFILE CHECKSUM: cef99db3e3353add64d790a1af71fbdd61b31cd0
+PODFILE CHECKSUM: 4fa6d6d9f05d87f9992ffa6d92da1824e3059a23
 
 COCOAPODS: 1.8.4

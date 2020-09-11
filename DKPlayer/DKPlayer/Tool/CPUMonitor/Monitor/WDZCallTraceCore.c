@@ -20,11 +20,15 @@
 #include <dispatch/dispatch.h>
 #include <pthread.h>
 
+
+#ifdef __aarch64__
+
 static pthread_key_t _thread_key;
 static bool _call_record_enable = true;
 static uint64_t _min_time_cost = 1000;
 static int _max_call_depth = 3;
 static wdzCallRecord *_wdzCallRecords;
+__unused static id (*orig_objc_msgSend)(id, SEL, ...);
 
 static int _wdzRecordNum;
 static int _wdzRecordAlloc;
@@ -142,5 +146,125 @@ uintptr_t after_objc_msgSend(){
     return pop_call_record();
 }
 
+#define call(b, value) \
+__asm volatile ("stp x8, x9, [sp, #-16]!\n"); \
+__asm volatile ("mov x12, %0\n" :: "r"(value)); \
+__asm volatile ("ldp x8, x9, [sp], #16\n"); \
+__asm volatile (#b " x12\n");
+
+#define save() \
+__asm volatile ( \
+"stp x8, x9, [sp, #-16]!\n" \
+"stp x6, x7, [sp, #-16]!\n" \
+"stp x4, x5, [sp, #-16]!\n" \
+"stp x2, x3, [sp, #-16]!\n" \
+"stp x0, x1, [sp, #-16]!\n");
+
+#define load() \
+__asm volatile ( \
+"ldp x0, x1, [sp], #16\n" \
+"ldp x2, x3, [sp], #16\n" \
+"ldp x4, x5, [sp], #16\n" \
+"ldp x6, x7, [sp], #16\n" \
+"ldp x8, x9, [sp], #16\n" );
+
+#define link(b, value) \
+__asm volatile ("stp x8, lr, [sp, #-16]!\n"); \
+__asm volatile ("sub sp, sp, #16\n"); \
+call(b, value); \
+__asm volatile ("add sp, sp, #16\n"); \
+__asm volatile ("ldp x8, lr, [sp], #16\n");
+
+#define ret() __asm volatile ("ret\n");
+__attribute__((__naked__))
+
+static void hook_objc_msgSend(){
+    //保存{x0, x9};
+    save()
+    
+    //交换参数
+    __asm volatile ("mov x2, lr\n");
+    __asm volatile ("mov x3, x4\n");
+    
+    // Call our before_objc_msgSend.
+    call(blr, &before_objc_msgSend)
+    
+    // Load parameters.
+    load()
+    
+    // Call through to the original objc_msgSend.
+    call(blr, orig_objc_msgSend)
+    
+    // Save original objc_msgSend return value.
+    save()
+    
+    // Call our after_objc_msgSend.
+    call(blr, &after_objc_msgSend)
+    
+    // restore lr
+    __asm volatile ("mov lr, x0\n");
+    
+    // Load original objc_msgSend return value.
+    load()
+    
+    // return
+    ret()
+}
+
+#pragma -mark public
+void wdzCallTraceStart(){
+    _call_record_enable = YES;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //创建绑定key
+        pthread_key_create(&_thread_key, &release_thread_call_stack);
+        rebind_symbols((struct rebinding[6]){
+            "objc_msgSend",(void *)hook_objc_msgSend, (void **)&orig_objc_msgSend
+        }, 1);
+    });
+}
 
 
+void wdzCallTraceStop(){
+    _call_record_enable = NO;
+}
+
+void wdzCallConfigMinTime(uint64_t us){
+    _min_time_cost = us;
+}
+
+void wdzCallConfigMaxDepth(int depth){
+    _max_call_depth = depth;
+}
+
+wdzCallRecord *wdzGetCallRecords(int *num){
+    if (num) {
+        *num = _wdzRecordNum;
+    }
+    return _wdzCallRecords;
+}
+
+void wdzClearCallRecords(){
+    if (_wdzCallRecords) {
+        free(_wdzCallRecords);
+        _wdzCallRecords = NULL;
+    }
+    _wdzRecordNum = 0;
+}
+
+
+#else
+void wdzCallTraceStart() {}
+void wdzCallTraceStop() {}
+void wdzCallConfigMinTime(uint64_t us) {
+}
+void wdzCallConfigMaxDepth(int depth) {
+}
+wdzCallRecord *wdzGetCallRecords(int *num) {
+    if (num) {
+        *num = 0;
+    }
+    return NULL;
+}
+void wdzClearCallRecords() {}
+#endif
