@@ -12,6 +12,7 @@
 #import "Masonry.h"
 #import "WDZCallDB.h"
 #import "WDZCallTraceTimeCostModel.h"
+#import "WDZCallTrace.h"
 
 static NSString *wdzClsCallCellIdentifier = @"wdzClsCallCell";
 
@@ -50,6 +51,14 @@ static NSString *wdzClsCallCellIdentifier = @"wdzClsCallCell";
         make.top.equalTo(self.closeView);
         make.size.mas_equalTo(CGSizeMake(40, 40));
     }];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {

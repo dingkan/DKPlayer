@@ -29,7 +29,7 @@
 -(instancetype)init{
     if (self = [super init]) {
         _clsCallDBPath = [PATH_OF_DOCUMENT stringByAppendingFormat:@"/cls.sqlite"];
-        if ([[NSFileManager defaultManager] isExecutableFileAtPath:_clsCallDBPath] == NO) {
+        if ([[NSFileManager defaultManager] fileExistsAtPath:_clsCallDBPath] == NO) {
             FMDatabase *db = [[FMDatabase alloc]initWithPath:_clsCallDBPath];
             if ([db open]) {
                 //方法读取频次表

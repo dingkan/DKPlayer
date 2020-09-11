@@ -11,6 +11,7 @@
 #import "WDZClsCallViewController.h"
 #import "WDZStackViewController.h"
 #import "WDZLagMonitor.h"
+#import "WDZCallTrace.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) UIButton *stackBt;
@@ -29,15 +30,6 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [[WDZLagMonitor shareInstance] beginMonitor];
-}
-
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    [[WDZLagMonitor shareInstance] endMonitor];
-}
 
 - (UIButton *)stackBt {
     if (!_stackBt) {

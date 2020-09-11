@@ -57,6 +57,8 @@
 		D665CEE0250B3EF9007D98D5 /* WDZClsCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEDC250B3EF9007D98D5 /* WDZClsCallViewController.m */; };
 		D665CEE1250B3EF9007D98D5 /* WDZStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEDD250B3EF9007D98D5 /* WDZStackViewController.m */; };
 		D665CEE4250B3F37007D98D5 /* WDZClsCallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEE2250B3F37007D98D5 /* WDZClsCallCell.m */; };
+		D665D280250B54B7007D98D5 /* DCHook.m in Sources */ = {isa = PBXBuildFile; fileRef = D665D27D250B54B7007D98D5 /* DCHook.m */; };
+		D665D281250B54B7007D98D5 /* UIViewController+clsCall.m in Sources */ = {isa = PBXBuildFile; fileRef = D665D27E250B54B7007D98D5 /* UIViewController+clsCall.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,6 +280,10 @@
 		D665CEDF250B3EF9007D98D5 /* WDZStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZStackViewController.h; sourceTree = "<group>"; };
 		D665CEE2250B3F37007D98D5 /* WDZClsCallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZClsCallCell.m; sourceTree = "<group>"; };
 		D665CEE3250B3F37007D98D5 /* WDZClsCallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZClsCallCell.h; sourceTree = "<group>"; };
+		D665D27C250B54B7007D98D5 /* UIViewController+clsCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+clsCall.h"; sourceTree = "<group>"; };
+		D665D27D250B54B7007D98D5 /* DCHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHook.m; sourceTree = "<group>"; };
+		D665D27E250B54B7007D98D5 /* UIViewController+clsCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+clsCall.m"; sourceTree = "<group>"; };
+		D665D27F250B54B7007D98D5 /* DCHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHook.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -704,9 +710,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D665D27B250B54B7007D98D5 /* Hook */ = {
+			isa = PBXGroup;
+			children = (
+				D665D27F250B54B7007D98D5 /* DCHook.h */,
+				D665D27D250B54B7007D98D5 /* DCHook.m */,
+				D665D27C250B54B7007D98D5 /* UIViewController+clsCall.h */,
+				D665D27E250B54B7007D98D5 /* UIViewController+clsCall.m */,
+			);
+			path = Hook;
+			sourceTree = "<group>";
+		};
 		D69A403D2508DCAF00657CDA /* CPUMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				D665D27B250B54B7007D98D5 /* Hook */,
 				D665CEB9250B2233007D98D5 /* Monitor */,
 				D665CECE250B2233007D98D5 /* View */,
 			);
@@ -902,6 +920,7 @@
 				AAFFB82324FD1A430081A2B9 /* AppDelegate.m in Sources */,
 				D6579F3F24FE23B700ED1C9F /* DKPromise+Timeout.m in Sources */,
 				D6579F4224FE23B700ED1C9F /* DKPromise+Async.m in Sources */,
+				D665D280250B54B7007D98D5 /* DCHook.m in Sources */,
 				D6579F4424FE23B700ED1C9F /* DKPromise+Catch.m in Sources */,
 				D665CEDB250B3E60007D98D5 /* WDZStackCell.m in Sources */,
 				D665CED2250B2233007D98D5 /* WDZCallTraceTimeCostModel.m in Sources */,
@@ -911,6 +930,7 @@
 				D6579F4724FE23B700ED1C9F /* DKPromise+Any.m in Sources */,
 				D6579F4124FE23B700ED1C9F /* DKPromise+All.m in Sources */,
 				AAFFB83424FD1A440081A2B9 /* main.m in Sources */,
+				D665D281250B54B7007D98D5 /* UIViewController+clsCall.m in Sources */,
 				D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */,
 				D6579F3D24FE23B700ED1C9F /* DKPromise+Retry.m in Sources */,
 				D665CED6250B2233007D98D5 /* WDZCallStack.m in Sources */,
