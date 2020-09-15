@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WDZLagMonitor.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[WDZLagMonitor shareInstance] beginMonitor];
     return YES;
 }
 

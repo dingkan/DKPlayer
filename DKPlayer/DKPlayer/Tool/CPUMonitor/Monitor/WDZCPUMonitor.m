@@ -16,7 +16,7 @@
 +(void)updateCPU{
     thread_act_array_t threads;
     mach_msg_type_number_t threadCount = 0;
-    const task_t thisTask = mach_host_self();
+    const task_t thisTask = mach_task_self();
     
     //获取任务中所有线程的线程端口个
     kern_return_t kr = task_threads(thisTask, &threads, &threadCount);
@@ -30,7 +30,7 @@
         thread_basic_info_t threadBaseInfo;
         mach_msg_type_number_t threadInfoCount = THREAD_INFO_MAX;
         
-        if (thread_info((thread_act_t)threads[i], THREAD_BASIC_INFO, (thread_info_t)threadInfo, &threadInfoCount) == KERN_BOOTFILE) {
+        if (thread_info((thread_act_t)threads[i], THREAD_BASIC_INFO, (thread_info_t)threadInfo, &threadInfoCount) == KERN_SUCCESS) {
             
             threadBaseInfo = (thread_basic_info_t)threadInfo;
             //非空闲
@@ -50,4 +50,15 @@
     }
     
 }
+
+
+uint64_t memoryFootprint() {
+    task_vm_info_data_t vmInfo;
+    mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
+    kern_return_t result = task_info(mach_task_self(), TASK_VM_INFO, (task_info_t) &vmInfo, &count);
+    if (result != KERN_SUCCESS)
+        return 0;
+    return vmInfo.phys_footprint;
+}
+
 @end

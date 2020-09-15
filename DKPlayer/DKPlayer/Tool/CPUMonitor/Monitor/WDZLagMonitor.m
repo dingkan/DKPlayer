@@ -31,7 +31,7 @@
     static WDZLagMonitor *manager;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[WDZLagMonitor alloc]init];
+        manager = [[self alloc]init];
     });
     return manager;
 }
@@ -39,7 +39,11 @@
 -(void)beginMonitor{
     self.isMonitoring = YES;
     
-    self.cpuMonitorTime = [NSTimer timerWithTimeInterval:3 target:self selector:@selector(updateCPUInfo) userInfo:nil repeats:YES];
+    self.cpuMonitorTime = [NSTimer scheduledTimerWithTimeInterval:3
+                                                             target:self
+                                                           selector:@selector(updateCPUInfo)
+                                                           userInfo:nil
+                                                            repeats:YES];
     
     //卡顿
     if (runLoopobserver) {
@@ -56,26 +60,26 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
        
         while (YES) {
-            long semaphoreWait = dispatch_semaphore_wait(self->dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, STUCKMONITORRATE * NSEC_PER_MSEC));
+            long semaphoreWait = dispatch_semaphore_wait(dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, STUCKMONITORRATE * NSEC_PER_MSEC));
             
             if (semaphoreWait != 0) {
                 
-                if (!self->runLoopobserver) {
-                    self->timeoutCount = 0;
-                    self->dispatchSemaphore = 0;
-                    self->runLoopActivity = 0;
+                if (!runLoopobserver) {
+                    timeoutCount = 0;
+                    dispatchSemaphore = 0;
+                    runLoopActivity = 0;
                     return;
                 }
                 
                 //检测卡顿
-                if (self->runLoopActivity == kCFRunLoopBeforeSources || self->runLoopActivity == kCFRunLoopAfterWaiting) {
-                    if (++self->timeoutCount < 3) {
+                if (runLoopActivity == kCFRunLoopBeforeSources || runLoopActivity == kCFRunLoopAfterWaiting) {
+                    if (++timeoutCount < 3) {
                         continue;
                     }
                     
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                        
-                        NSString *reStr = [WDZCallStack callStackWithType:(kWDZStackTypeAll)];
+                        NSString *reStr = [WDZCallStack callStackWithType:(kWDZStackTypeMain)];
                         WDZCallStackModel *model = [[WDZCallStackModel alloc]init];
                         model.stackStr = reStr;
                         model.isStuck = YES;
@@ -86,7 +90,7 @@
                 
             }
             
-            self->timeoutCount = 0;
+            timeoutCount = 0;
         }
         
     });

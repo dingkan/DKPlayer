@@ -117,6 +117,7 @@ static NSString *wdzStackCellIdentifier = @"wdzStackCell";
 
 - (void)close {
     [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Getter

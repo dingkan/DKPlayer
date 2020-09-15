@@ -16,6 +16,8 @@
 @interface ViewController ()
 @property (nonatomic, strong) UIButton *stackBt;
 @property (nonatomic, strong) UIButton *clsCallBt;
+
+@property (nonatomic, strong) NSTimer *timer;
 @end
 
 @implementation ViewController
@@ -28,6 +30,14 @@
     [self.view addSubview:self.stackBt];
     [self.view addSubview:self.clsCallBt];
     
+//    self.timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(dk_fire) userInfo:nil repeats:NO];
+//    [self.timer fire];
+}
+
+-(void)dk_fire{
+    for (int i = 0; i < 100000; i ++) {
+        NSLog(@"++++");
+    }
 }
 
 

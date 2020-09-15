@@ -29,8 +29,8 @@
 }
 
 +(void)startWithMaxDepth:(int)depth minCost:(double)ms{
-    wdzCallConfigMinTime(ms * 1000);
     wdzCallConfigMaxDepth(depth);
+    wdzCallConfigMinTime(ms * 1000);
     [WDZCallTrace start];
 }
 
@@ -62,6 +62,7 @@
             if ([model.className isEqualToString:@"WDZCallTrace"]) {
                 break;
             }
+            //记录方法的子方法路径
             model.path = [NSString stringWithFormat:@"%@ -[%@ %@]",model.path, model.className, model.methodName];
             [self appendRecord:model mstr:mstr];
         }
@@ -86,7 +87,7 @@
     for (int i = 0; i < count; i ++) {
         WDZCallTraceTimeCostModel *model = array[i];
         if (model.callDepth > 0) {
-            [array removeObject:model];
+            [array removeObjectAtIndex:i];
             //下一个
             for (int j = i; j < count - 1; j ++) {
                 //网子节点添加

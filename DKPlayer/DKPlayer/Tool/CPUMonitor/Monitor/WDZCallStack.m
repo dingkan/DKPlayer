@@ -10,6 +10,7 @@
 
 //栈帧
 //uintptr_t 类型用来存放指针地址
+//为通过回溯设计结构支持栈地址有小到大，地址里存储上个栈指针的地址
 typedef struct WDZStackFrame{
     const struct WDZStackFrame *const previous;
     const uintptr_t return_address;
@@ -37,7 +38,7 @@ static mach_port_t _wdzMainThreadId;
         
         thread_act_array_t list;
         mach_msg_type_number_t listCnt = 0;
-        const task_t task = mach_thread_self();//init
+        const task_t task = mach_task_self();//init
         //获取这个task 所有线程
         kern_return_t kt = task_threads(task, &list, &listCnt);
         if (kt != KERN_SUCCESS) {
@@ -53,18 +54,18 @@ static mach_port_t _wdzMainThreadId;
         NSString *memStr = @"";
         struct mach_task_basic_info taskBasicInfo;
         mach_msg_type_number_t taskInfoCount = sizeof(taskBasicInfo) / sizeof(integer_t);
-        if (task_info(task, MACH_TASK_BASIC_INFO, (task_info_t)&taskBasicInfo, &taskInfoCount) == KERN_SUCCESS) {
+        if (task_info(mach_task_self(), MACH_TASK_BASIC_INFO, (task_info_t)&taskBasicInfo, &taskInfoCount) == KERN_SUCCESS) {
             memStr = [NSString stringWithFormat:@"used %llu MB \n",taskBasicInfo.resident_size / (1024 * 1024)];
         }
         NSLog(@"%@%@",memStr, reStr);
         
         //释放虚拟缓存，防止leak
-        assert(vm_deallocate(task, (vm_address_t)list, listCnt * sizeof(thread_t)) == KERN_SUCCESS);
+        assert(vm_deallocate(mach_task_self(), (vm_address_t)list, listCnt * sizeof(thread_t)) == KERN_SUCCESS);
         return [reStr copy];
         
     }else if (type == kWDZStackTypeMain){
         NSString *reStr = wdzStackOfThread((thread_t)_wdzMainThreadId);
-        assert(vm_deallocate(mach_thread_self(), (vm_address_t)_wdzMainThreadId, 1 * sizeof(thread_t)) == KERN_SUCCESS);
+        assert(vm_deallocate(mach_task_self(), (vm_address_t)_wdzMainThreadId, 1 * sizeof(thread_t)) == KERN_SUCCESS);
         NSLog(@"%@",reStr);
         return [reStr copy];
     }else if (type == kWDZStackTypeCurrent){
@@ -73,7 +74,7 @@ static mach_port_t _wdzMainThreadId;
         mach_msg_type_number_t count;
         thread_act_array_t list;
         //根据当前task获取所有线程
-        task_threads(mach_thread_self(), &list, &count);
+        task_threads(mach_task_self(), &list, &count);
         NSTimeInterval currentTimeStamp = [[NSDate date] timeIntervalSince1970];
         NSThread *nsthread = [NSThread currentThread];
         NSString *originName = nsthread.name;
@@ -86,12 +87,13 @@ static mach_port_t _wdzMainThreadId;
             
             if (pt) {
                 name[0] = '\0';
+                //获取线程名字
                 pthread_getname_np(pt, name, sizeof name);
                 //is current
                 if (!strcmp(name, [nsthread name].UTF8String)) {
                     [nsthread setName:originName];
                     resStr = wdzStackOfThread(list[i]);
-                    assert(vm_deallocate(mach_thread_self(), (vm_address_t)list[i], 1 * sizeof(thread_t)) == KERN_SUCCESS);
+                    assert(vm_deallocate(mach_task_self(), (vm_address_t)list[i], 1 * sizeof(thread_t)) == KERN_SUCCESS);
                     NSLog(@"%@",resStr);
                     return [resStr copy];
                 }
@@ -103,7 +105,8 @@ static mach_port_t _wdzMainThreadId;
         resStr = wdzStackOfThread(mach_thread_self());
         NSLog(@"%@",resStr);
         return [resStr copy];
-    }return @"";
+    }
+    return @"";
 }
 
 #pragma mark get stack of mach_thread
@@ -116,7 +119,7 @@ NSString *wdzStackOfThread(thread_t thread){
     mach_msg_type_number_t threadInfoCount = THREAD_INFO_MAX;
     
     //获取线程堆栈数据
-    if (thread_info((thread_inspect_t) thread, THREAD_BASIC_INFO, (thread_info_t)threadInfo, &threadInfoCount) == KERN_SUCCESS) {
+    if (thread_info((thread_act_t)thread, THREAD_BASIC_INFO, (thread_info_t)threadInfo, &threadInfoCount) == KERN_SUCCESS) {
         threadBasicInfo = (thread_basic_info_t)threadInfo;
         if (!(threadBasicInfo->flags & TH_FLAGS_IDLE)) {//非空闲线程
             //存储自定义线程信息
@@ -233,7 +236,7 @@ bool wdzDladdr(const uintptr_t address, Dl_info* const info){
     info->dli_fname = NULL;
     info->dli_fbase = NULL;
     info->dli_sname = NULL;
-    info->dli_fbase = NULL;
+    info->dli_saddr = NULL;
     
     //更具地址获取对应的image
     const uint32_t idx = wdzDyldImageIndexFromAddress(address);
@@ -387,11 +390,9 @@ uintptr_t wdzCmdFirstPointerFromMachHeader(const struct mach_header* const machH
         case MH_CIGAM:
         case MH_MAGIC_64:
         case MH_CIGAM_64:
-            return (uintptr_t)((machHeaderByCPU *)machHeader + 1);
-            break;
+            return (uintptr_t)(((machHeaderByCPU *)machHeader) + 1);
         default:
             return 0;//Header 不合法
-            break;
     }
 }
 

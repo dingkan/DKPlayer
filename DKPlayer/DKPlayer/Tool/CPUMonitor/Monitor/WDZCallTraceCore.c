@@ -23,13 +23,13 @@
 
 #ifdef __aarch64__
 
-static pthread_key_t _thread_key;
 static bool _call_record_enable = true;
 static uint64_t _min_time_cost = 1000;
 static int _max_call_depth = 3;
-static wdzCallRecord *_wdzCallRecords;
+static pthread_key_t _thread_key;
 __unused static id (*orig_objc_msgSend)(id, SEL, ...);
 
+static wdzCallRecord *_wdzCallRecords;
 static int _wdzRecordNum;
 static int _wdzRecordAlloc;
 
@@ -67,9 +67,7 @@ static inline thread_call_stack * get_thread_call_stack(){
 
 static void release_thread_call_stack(void *ptr){
     thread_call_stack *stack = (thread_call_stack *)ptr;
-    if (stack == NULL) {
-        return;
-    }
+    if (!stack) return;
     if (stack->stack) free(stack->stack);
     free(stack);
 }
@@ -79,7 +77,7 @@ static inline void push_call_record(id _self, Class _cls, SEL _cmd, uintptr_t _l
     thread_call_stack *stack = get_thread_call_stack();
     if (stack) {
         int nextIndex = (++stack->index);
-        if (nextIndex > stack->allocated_length) {
+        if (nextIndex >= stack->allocated_length) {
             stack->allocated_length += 64;
             stack->stack = (thread_call_record *)realloc(stack->stack, stack->allocated_length * sizeof(thread_call_record));
         }
@@ -138,8 +136,8 @@ static inline uintptr_t pop_call_record(){
     return record->lr;
 }
 
-void before_objc_msgSend(id _self, SEL _cmd, uintptr_t _lr){
-    push_call_record(_self, object_getClass(_self), _cmd, _lr);
+void before_objc_msgSend(id _self, SEL _cmd, uintptr_t lr){
+    push_call_record(_self, object_getClass(_self), _cmd, lr);
 }
 
 uintptr_t after_objc_msgSend(){
@@ -226,7 +224,7 @@ void wdzCallTraceStart(){
 
 
 void wdzCallTraceStop(){
-    _call_record_enable = NO;
+    _call_record_enable = false;
 }
 
 void wdzCallConfigMinTime(uint64_t us){
