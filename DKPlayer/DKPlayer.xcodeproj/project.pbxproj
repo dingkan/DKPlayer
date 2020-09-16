@@ -59,6 +59,7 @@
 		D665CEE4250B3F37007D98D5 /* WDZClsCallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEE2250B3F37007D98D5 /* WDZClsCallCell.m */; };
 		D665D280250B54B7007D98D5 /* DCHook.m in Sources */ = {isa = PBXBuildFile; fileRef = D665D27D250B54B7007D98D5 /* DCHook.m */; };
 		D665D281250B54B7007D98D5 /* UIViewController+clsCall.m in Sources */ = {isa = PBXBuildFile; fileRef = D665D27E250B54B7007D98D5 /* UIViewController+clsCall.m */; };
+		D66FCB2325122EDE004BEFAC /* DKCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = D66FCB2225122EDE004BEFAC /* DKCallTraceCore.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,6 +285,8 @@
 		D665D27D250B54B7007D98D5 /* DCHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHook.m; sourceTree = "<group>"; };
 		D665D27E250B54B7007D98D5 /* UIViewController+clsCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+clsCall.m"; sourceTree = "<group>"; };
 		D665D27F250B54B7007D98D5 /* DCHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHook.h; sourceTree = "<group>"; };
+		D66FCB2125122EDE004BEFAC /* DKCallTraceCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCallTraceCore.h; sourceTree = "<group>"; };
+		D66FCB2225122EDE004BEFAC /* DKCallTraceCore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DKCallTraceCore.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -691,6 +694,8 @@
 				D665CEBF250B2233007D98D5 /* WDZCPUMonitor.m */,
 				D665CEC2250B2233007D98D5 /* WDZLagMonitor.h */,
 				D665CECD250B2233007D98D5 /* WDZLagMonitor.m */,
+				D66FCB2125122EDE004BEFAC /* DKCallTraceCore.h */,
+				D66FCB2225122EDE004BEFAC /* DKCallTraceCore.c */,
 			);
 			path = Monitor;
 			sourceTree = "<group>";
@@ -917,6 +922,7 @@
 				D665CEE0250B3EF9007D98D5 /* WDZClsCallViewController.m in Sources */,
 				D665CECF250B2233007D98D5 /* WDZCallStackModel.m in Sources */,
 				D665CED4250B2233007D98D5 /* WDZCallTraceCore.c in Sources */,
+				D66FCB2325122EDE004BEFAC /* DKCallTraceCore.c in Sources */,
 				AAFFB82324FD1A430081A2B9 /* AppDelegate.m in Sources */,
 				D6579F3F24FE23B700ED1C9F /* DKPromise+Timeout.m in Sources */,
 				D6579F4224FE23B700ED1C9F /* DKPromise+Async.m in Sources */,
