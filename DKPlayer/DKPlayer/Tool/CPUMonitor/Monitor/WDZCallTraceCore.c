@@ -29,8 +29,11 @@ static int _max_call_depth = 3;
 static pthread_key_t _thread_key;
 __unused static id (*orig_objc_msgSend)(id, SEL, ...);
 
+//格式化的耗时记录
 static wdzCallRecord *_wdzCallRecords;
+//格式化记录个数
 static int _wdzRecordNum;
+//格式化记录空间大小
 static int _wdzRecordAlloc;
 
 typedef struct {
@@ -49,6 +52,8 @@ typedef struct {
 } thread_call_stack;
 
 //inline是c99的特性。在c99中，inline是向编译器建议，将被inline修饰的函数以内联的方式嵌入到调用这个函数的地方。而编译器会判断这样做是否合适，以此最终决定是否这么做。
+
+//获取与stack绑定的数据
 static inline thread_call_stack * get_thread_call_stack(){
     //读取线程私有数据
     thread_call_stack *stack = (thread_call_stack *)pthread_getspecific(_thread_key);
@@ -102,6 +107,7 @@ static inline uintptr_t pop_call_record(){
     thread_call_stack *stack = get_thread_call_stack();
     int currentIndex = stack->index;
     int nextIndex = stack->index --;
+    //获取父级函数调用栈
     thread_call_record *record = &stack->stack[nextIndex];
     
     if (stack->is_main_thread && _call_record_enable) {
@@ -115,6 +121,7 @@ static inline uintptr_t pop_call_record(){
         
         uint64_t cost = time - record->time;
         if (cost > _min_time_cost && stack->index < _max_call_depth) {
+            //初始化格式耗时记录
             if (!_wdzCallRecords) {
                 _wdzRecordAlloc = 1024;
                 _wdzCallRecords = malloc(sizeof(wdzCallRecord) * _wdzRecordAlloc);
@@ -126,13 +133,15 @@ static inline uintptr_t pop_call_record(){
                 _wdzCallRecords = realloc(_wdzCallRecords, sizeof(wdzCallRecord) * _wdzRecordAlloc);
             }
             
-            wdzCallRecord *log = &_wdzCallRecords[_wdzRecordNum- 1];
+            //根据当前页数地址，初始化格式记录
+            wdzCallRecord *log = &_wdzCallRecords[_wdzRecordNum - 1];
             log->cls = record->cls;
             log->sel = record->cmd;
             log->depth = currentIndex;
             log->time = cost;
         }
     }
+    //返回下一个函数地址
     return record->lr;
 }
 

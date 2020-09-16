@@ -40,6 +40,7 @@
 
 +(void)save{
     NSMutableString *mStr = [NSMutableString string];
+    //获取耗时数据
     NSArray <WDZCallTraceTimeCostModel *>*records = [self loadRecords];
     for (WDZCallTraceTimeCostModel *model in records) {
         model.path = [NSString stringWithFormat:@"[%@ %@]",model.className, model.methodName];
@@ -54,6 +55,7 @@
 }
 
 +(void)appendRecord:(WDZCallTraceTimeCostModel *)record mstr:(NSMutableString *)mstr{
+    //如果没有下层方法调用关系
     if (record.subCosts.count < 1) {
         record.lastCell = YES;
         [[WDZCallDB shareInstance] addClsCallStackModel:record];
@@ -72,7 +74,10 @@
 +(NSArray *)loadRecords{
     NSMutableArray <WDZCallTraceTimeCostModel *>*array = [NSMutableArray array];
     int num = 0;
+    //获取格式化耗时记录
     wdzCallRecord *records = wdzGetCallRecords(&num);
+    
+    //遍历所有格式化耗时记录，并且初始化耗时模型
     for (int i = 0; i < num; i ++) {
         wdzCallRecord *re = &records[i];
         WDZCallTraceTimeCostModel *model = [[WDZCallTraceTimeCostModel alloc]init];
@@ -83,6 +88,8 @@
         model.callDepth = re->depth;
         [array addObject:model];
     }
+    
+    //重新排列方法
     NSUInteger count = array.count;
     for (int i = 0; i < count; i ++) {
         WDZCallTraceTimeCostModel *model = array[i];
