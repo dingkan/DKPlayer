@@ -139,7 +139,7 @@
             if ([set next]) {
                 int frequency = [set intForColumn:@"frequency"] + 1;
                 int cid = [set intForColumn:@"cid"];
-                [db executeUpdate:@"update clscall set frequency = ? where cid = ?",frequency,cid];
+                [db executeUpdate:@"update clscall set frequency = ? where cid = ?",@(frequency),@(cid)];
             }else{
                 [db executeUpdate:@"insert into clscall (cls, mtd, path, timecost, calldepth, frequency, lastcall) values (?, ?, ?, ?, ?, ?, ?)", model.className, model.methodName, model.path, @(model.timeCost), @(model.callDepth), @1, @(model.lastCell)];
             }
