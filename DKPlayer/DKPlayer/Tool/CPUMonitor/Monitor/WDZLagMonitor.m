@@ -60,26 +60,26 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
        
         while (YES) {
-            long semaphoreWait = dispatch_semaphore_wait(dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, STUCKMONITORRATE * NSEC_PER_MSEC));
+            long semaphoreWait = dispatch_semaphore_wait(self->dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, STUCKMONITORRATE * NSEC_PER_MSEC));
             
             if (semaphoreWait != 0) {
                 
-                if (!runLoopobserver) {
-                    timeoutCount = 0;
-                    dispatchSemaphore = 0;
-                    runLoopActivity = 0;
+                if (!self->runLoopobserver) {
+                    self->timeoutCount = 0;
+                    self->dispatchSemaphore = 0;
+                    self->runLoopActivity = 0;
                     return;
                 }
                 
                 //检测卡顿
-                if (runLoopActivity == kCFRunLoopBeforeSources || runLoopActivity == kCFRunLoopAfterWaiting) {
-                    if (++timeoutCount < 3) {
+                if (self->runLoopActivity == kCFRunLoopBeforeSources || self->runLoopActivity == kCFRunLoopAfterWaiting) {
+                    if (++self->timeoutCount < 3) {
                         continue;
                     }
                     
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                        
-                        NSString *reStr = [WDZCallStack callStackWithType:(kWDZStackTypeMain)];
+                        NSString *reStr = [WDZCallStack callStackWithType:(kWDZStackTypeAll)];
                         WDZCallStackModel *model = [[WDZCallStackModel alloc]init];
                         model.stackStr = reStr;
                         model.isStuck = YES;
@@ -90,7 +90,7 @@
                 
             }
             
-            timeoutCount = 0;
+            self->timeoutCount = 0;
         }
         
     });

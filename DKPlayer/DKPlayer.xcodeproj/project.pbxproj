@@ -8,24 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		66A87D108D8A3943240AC1F8 /* Pods_DKPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1E47485B15DC85096BD4B7 /* Pods_DKPlayer.framework */; };
-		AA4A31B825110D8700171D92 /* WDZCallStackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A319725110D8600171D92 /* WDZCallStackModel.m */; };
-		AA4A31B925110D8700171D92 /* WDZCallDB.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A319925110D8600171D92 /* WDZCallDB.m */; };
-		AA4A31BA25110D8700171D92 /* WDZCPUMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A319B25110D8600171D92 /* WDZCPUMonitor.m */; };
-		AA4A31BB25110D8700171D92 /* WDZCallTraceTimeCostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A319C25110D8600171D92 /* WDZCallTraceTimeCostModel.m */; };
-		AA4A31BC25110D8700171D92 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = AA4A319D25110D8600171D92 /* fishhook.c */; };
-		AA4A31BD25110D8700171D92 /* WDZCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31A025110D8700171D92 /* WDZCallTraceCore.c */; };
-		AA4A31BE25110D8700171D92 /* WDZCallLib.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31A225110D8700171D92 /* WDZCallLib.m */; };
-		AA4A31BF25110D8700171D92 /* WDZCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31A725110D8700171D92 /* WDZCallStack.m */; };
-		AA4A31C025110D8700171D92 /* WDZCallTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31A825110D8700171D92 /* WDZCallTrace.m */; };
-		AA4A31C125110D8700171D92 /* WDZLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31A925110D8700171D92 /* WDZLagMonitor.m */; };
-		AA4A31C225110D8700171D92 /* WDZStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31AB25110D8700171D92 /* WDZStackViewController.m */; };
-		AA4A31C325110D8700171D92 /* WDZClsCallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31AC25110D8700171D92 /* WDZClsCallCell.m */; };
-		AA4A31C425110D8700171D92 /* WDZClsCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31B025110D8700171D92 /* WDZClsCallViewController.m */; };
-		AA4A31C525110D8700171D92 /* WDZStackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31B125110D8700171D92 /* WDZStackCell.m */; };
-		AA4A31C625110D8700171D92 /* DCHook.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31B525110D8700171D92 /* DCHook.m */; };
-		AA4A31C725110D8700171D92 /* UIViewController+clsCall.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31B625110D8700171D92 /* UIViewController+clsCall.m */; };
-		AA4A31CA25110DC900171D92 /* DKCallStackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31C925110DC900171D92 /* DKCallStackModel.m */; };
-		AA4A31CD25110E1E00171D92 /* DKCallTraceTimeCostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A31CC25110E1E00171D92 /* DKCallTraceTimeCostModel.m */; };
 		AAFFB82324FD1A430081A2B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB82224FD1A430081A2B9 /* AppDelegate.m */; };
 		AAFFB82924FD1A430081A2B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB82824FD1A430081A2B9 /* ViewController.m */; };
 		AAFFB82C24FD1A430081A2B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFFB82A24FD1A430081A2B9 /* Main.storyboard */; };
@@ -61,6 +43,23 @@
 		D6579F4524FE23B700ED1C9F /* DKPromise+Do.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3424FE23B700ED1C9F /* DKPromise+Do.m */; };
 		D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3724FE23B700ED1C9F /* DKPromise.m */; };
 		D6579F4724FE23B700ED1C9F /* DKPromise+Any.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3824FE23B700ED1C9F /* DKPromise+Any.m */; };
+		D665CECF250B2233007D98D5 /* WDZCallStackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEBB250B2233007D98D5 /* WDZCallStackModel.m */; };
+		D665CED0250B2233007D98D5 /* WDZCallDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEBD250B2233007D98D5 /* WDZCallDB.m */; };
+		D665CED1250B2233007D98D5 /* WDZCPUMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEBF250B2233007D98D5 /* WDZCPUMonitor.m */; };
+		D665CED2250B2233007D98D5 /* WDZCallTraceTimeCostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEC0250B2233007D98D5 /* WDZCallTraceTimeCostModel.m */; };
+		D665CED3250B2233007D98D5 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = D665CEC1250B2233007D98D5 /* fishhook.c */; };
+		D665CED4250B2233007D98D5 /* WDZCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = D665CEC4250B2233007D98D5 /* WDZCallTraceCore.c */; };
+		D665CED5250B2233007D98D5 /* WDZCallLib.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEC6250B2233007D98D5 /* WDZCallLib.m */; };
+		D665CED6250B2233007D98D5 /* WDZCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CECB250B2233007D98D5 /* WDZCallStack.m */; };
+		D665CED7250B2233007D98D5 /* WDZCallTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CECC250B2233007D98D5 /* WDZCallTrace.m */; };
+		D665CED8250B2233007D98D5 /* WDZLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CECD250B2233007D98D5 /* WDZLagMonitor.m */; };
+		D665CEDB250B3E60007D98D5 /* WDZStackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEDA250B3E60007D98D5 /* WDZStackCell.m */; };
+		D665CEE0250B3EF9007D98D5 /* WDZClsCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEDC250B3EF9007D98D5 /* WDZClsCallViewController.m */; };
+		D665CEE1250B3EF9007D98D5 /* WDZStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEDD250B3EF9007D98D5 /* WDZStackViewController.m */; };
+		D665CEE4250B3F37007D98D5 /* WDZClsCallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEE2250B3F37007D98D5 /* WDZClsCallCell.m */; };
+		D665D280250B54B7007D98D5 /* DCHook.m in Sources */ = {isa = PBXBuildFile; fileRef = D665D27D250B54B7007D98D5 /* DCHook.m */; };
+		D665D281250B54B7007D98D5 /* UIViewController+clsCall.m in Sources */ = {isa = PBXBuildFile; fileRef = D665D27E250B54B7007D98D5 /* UIViewController+clsCall.m */; };
+		D66FCB2325122EDE004BEFAC /* DKCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = D66FCB2225122EDE004BEFAC /* DKCallTraceCore.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,42 +81,6 @@
 
 /* Begin PBXFileReference section */
 		6F1E47485B15DC85096BD4B7 /* Pods_DKPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA4A319625110D8600171D92 /* WDZCallTraceCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTraceCore.h; sourceTree = "<group>"; };
-		AA4A319725110D8600171D92 /* WDZCallStackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStackModel.m; sourceTree = "<group>"; };
-		AA4A319825110D8600171D92 /* WDZCallLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallLib.h; sourceTree = "<group>"; };
-		AA4A319925110D8600171D92 /* WDZCallDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallDB.m; sourceTree = "<group>"; };
-		AA4A319A25110D8600171D92 /* WDZCallStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallStack.h; sourceTree = "<group>"; };
-		AA4A319B25110D8600171D92 /* WDZCPUMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCPUMonitor.m; sourceTree = "<group>"; };
-		AA4A319C25110D8600171D92 /* WDZCallTraceTimeCostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallTraceTimeCostModel.m; sourceTree = "<group>"; };
-		AA4A319D25110D8600171D92 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
-		AA4A319E25110D8700171D92 /* WDZLagMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZLagMonitor.h; sourceTree = "<group>"; };
-		AA4A319F25110D8700171D92 /* WDZCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTrace.h; sourceTree = "<group>"; };
-		AA4A31A025110D8700171D92 /* WDZCallTraceCore.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WDZCallTraceCore.c; sourceTree = "<group>"; };
-		AA4A31A125110D8700171D92 /* WDZCallDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallDB.h; sourceTree = "<group>"; };
-		AA4A31A225110D8700171D92 /* WDZCallLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallLib.m; sourceTree = "<group>"; };
-		AA4A31A325110D8700171D92 /* WDZCallStackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallStackModel.h; sourceTree = "<group>"; };
-		AA4A31A425110D8700171D92 /* WDZCPUMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCPUMonitor.h; sourceTree = "<group>"; };
-		AA4A31A525110D8700171D92 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
-		AA4A31A625110D8700171D92 /* WDZCallTraceTimeCostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTraceTimeCostModel.h; sourceTree = "<group>"; };
-		AA4A31A725110D8700171D92 /* WDZCallStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStack.m; sourceTree = "<group>"; };
-		AA4A31A825110D8700171D92 /* WDZCallTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallTrace.m; sourceTree = "<group>"; };
-		AA4A31A925110D8700171D92 /* WDZLagMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZLagMonitor.m; sourceTree = "<group>"; };
-		AA4A31AB25110D8700171D92 /* WDZStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZStackViewController.m; sourceTree = "<group>"; };
-		AA4A31AC25110D8700171D92 /* WDZClsCallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZClsCallCell.m; sourceTree = "<group>"; };
-		AA4A31AD25110D8700171D92 /* WDZStackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZStackCell.h; sourceTree = "<group>"; };
-		AA4A31AE25110D8700171D92 /* WDZClsCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZClsCallViewController.h; sourceTree = "<group>"; };
-		AA4A31AF25110D8700171D92 /* WDZStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZStackViewController.h; sourceTree = "<group>"; };
-		AA4A31B025110D8700171D92 /* WDZClsCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZClsCallViewController.m; sourceTree = "<group>"; };
-		AA4A31B125110D8700171D92 /* WDZStackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZStackCell.m; sourceTree = "<group>"; };
-		AA4A31B225110D8700171D92 /* WDZClsCallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZClsCallCell.h; sourceTree = "<group>"; };
-		AA4A31B425110D8700171D92 /* UIViewController+clsCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+clsCall.h"; sourceTree = "<group>"; };
-		AA4A31B525110D8700171D92 /* DCHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHook.m; sourceTree = "<group>"; };
-		AA4A31B625110D8700171D92 /* UIViewController+clsCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+clsCall.m"; sourceTree = "<group>"; };
-		AA4A31B725110D8700171D92 /* DCHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHook.h; sourceTree = "<group>"; };
-		AA4A31C825110DC900171D92 /* DKCallStackModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCallStackModel.h; sourceTree = "<group>"; };
-		AA4A31C925110DC900171D92 /* DKCallStackModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKCallStackModel.m; sourceTree = "<group>"; };
-		AA4A31CB25110E1E00171D92 /* DKCallTraceTimeCostModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCallTraceTimeCostModel.h; sourceTree = "<group>"; };
-		AA4A31CC25110E1E00171D92 /* DKCallTraceTimeCostModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKCallTraceTimeCostModel.m; sourceTree = "<group>"; };
 		AAFFB81E24FD1A430081A2B9 /* DKPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFFB82124FD1A430081A2B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAFFB82224FD1A430081A2B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -290,6 +253,40 @@
 		D6579F3A24FE23B700ED1C9F /* DKPromise+Then.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Then.h"; sourceTree = "<group>"; };
 		D6579F3B24FE23B700ED1C9F /* DKPromise+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Async.h"; sourceTree = "<group>"; };
 		D6579F3C24FE23B700ED1C9F /* DKPromise+All.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+All.h"; sourceTree = "<group>"; };
+		D665CEBA250B2233007D98D5 /* WDZCallTraceCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTraceCore.h; sourceTree = "<group>"; };
+		D665CEBB250B2233007D98D5 /* WDZCallStackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStackModel.m; sourceTree = "<group>"; };
+		D665CEBC250B2233007D98D5 /* WDZCallLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallLib.h; sourceTree = "<group>"; };
+		D665CEBD250B2233007D98D5 /* WDZCallDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallDB.m; sourceTree = "<group>"; };
+		D665CEBE250B2233007D98D5 /* WDZCallStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallStack.h; sourceTree = "<group>"; };
+		D665CEBF250B2233007D98D5 /* WDZCPUMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCPUMonitor.m; sourceTree = "<group>"; };
+		D665CEC0250B2233007D98D5 /* WDZCallTraceTimeCostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallTraceTimeCostModel.m; sourceTree = "<group>"; };
+		D665CEC1250B2233007D98D5 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		D665CEC2250B2233007D98D5 /* WDZLagMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZLagMonitor.h; sourceTree = "<group>"; };
+		D665CEC3250B2233007D98D5 /* WDZCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTrace.h; sourceTree = "<group>"; };
+		D665CEC4250B2233007D98D5 /* WDZCallTraceCore.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WDZCallTraceCore.c; sourceTree = "<group>"; };
+		D665CEC5250B2233007D98D5 /* WDZCallDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallDB.h; sourceTree = "<group>"; };
+		D665CEC6250B2233007D98D5 /* WDZCallLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallLib.m; sourceTree = "<group>"; };
+		D665CEC7250B2233007D98D5 /* WDZCallStackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallStackModel.h; sourceTree = "<group>"; };
+		D665CEC8250B2233007D98D5 /* WDZCPUMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCPUMonitor.h; sourceTree = "<group>"; };
+		D665CEC9250B2233007D98D5 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		D665CECA250B2233007D98D5 /* WDZCallTraceTimeCostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTraceTimeCostModel.h; sourceTree = "<group>"; };
+		D665CECB250B2233007D98D5 /* WDZCallStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStack.m; sourceTree = "<group>"; };
+		D665CECC250B2233007D98D5 /* WDZCallTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallTrace.m; sourceTree = "<group>"; };
+		D665CECD250B2233007D98D5 /* WDZLagMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZLagMonitor.m; sourceTree = "<group>"; };
+		D665CED9250B3E60007D98D5 /* WDZStackCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDZStackCell.h; sourceTree = "<group>"; };
+		D665CEDA250B3E60007D98D5 /* WDZStackCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDZStackCell.m; sourceTree = "<group>"; };
+		D665CEDC250B3EF9007D98D5 /* WDZClsCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZClsCallViewController.m; sourceTree = "<group>"; };
+		D665CEDD250B3EF9007D98D5 /* WDZStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZStackViewController.m; sourceTree = "<group>"; };
+		D665CEDE250B3EF9007D98D5 /* WDZClsCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZClsCallViewController.h; sourceTree = "<group>"; };
+		D665CEDF250B3EF9007D98D5 /* WDZStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZStackViewController.h; sourceTree = "<group>"; };
+		D665CEE2250B3F37007D98D5 /* WDZClsCallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZClsCallCell.m; sourceTree = "<group>"; };
+		D665CEE3250B3F37007D98D5 /* WDZClsCallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZClsCallCell.h; sourceTree = "<group>"; };
+		D665D27C250B54B7007D98D5 /* UIViewController+clsCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+clsCall.h"; sourceTree = "<group>"; };
+		D665D27D250B54B7007D98D5 /* DCHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHook.m; sourceTree = "<group>"; };
+		D665D27E250B54B7007D98D5 /* UIViewController+clsCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+clsCall.m"; sourceTree = "<group>"; };
+		D665D27F250B54B7007D98D5 /* DCHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHook.h; sourceTree = "<group>"; };
+		D66FCB2125122EDE004BEFAC /* DKCallTraceCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCallTraceCore.h; sourceTree = "<group>"; };
+		D66FCB2225122EDE004BEFAC /* DKCallTraceCore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DKCallTraceCore.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,73 +338,6 @@
 				6F1E47485B15DC85096BD4B7 /* Pods_DKPlayer.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AA4A319425110D8600171D92 /* CPUMonitor */ = {
-			isa = PBXGroup;
-			children = (
-				AA4A319525110D8600171D92 /* Monitor */,
-				AA4A31AA25110D8700171D92 /* View */,
-				AA4A31B325110D8700171D92 /* Hook */,
-			);
-			path = CPUMonitor;
-			sourceTree = "<group>";
-		};
-		AA4A319525110D8600171D92 /* Monitor */ = {
-			isa = PBXGroup;
-			children = (
-				AA4A319D25110D8600171D92 /* fishhook.c */,
-				AA4A31A525110D8700171D92 /* fishhook.h */,
-				AA4A31A125110D8700171D92 /* WDZCallDB.h */,
-				AA4A319925110D8600171D92 /* WDZCallDB.m */,
-				AA4A319825110D8600171D92 /* WDZCallLib.h */,
-				AA4A31A225110D8700171D92 /* WDZCallLib.m */,
-				AA4A319A25110D8600171D92 /* WDZCallStack.h */,
-				AA4A31A725110D8700171D92 /* WDZCallStack.m */,
-				AA4A31A325110D8700171D92 /* WDZCallStackModel.h */,
-				AA4A319725110D8600171D92 /* WDZCallStackModel.m */,
-				AA4A319F25110D8700171D92 /* WDZCallTrace.h */,
-				AA4A31A825110D8700171D92 /* WDZCallTrace.m */,
-				AA4A31A025110D8700171D92 /* WDZCallTraceCore.c */,
-				AA4A319625110D8600171D92 /* WDZCallTraceCore.h */,
-				AA4A31A625110D8700171D92 /* WDZCallTraceTimeCostModel.h */,
-				AA4A319C25110D8600171D92 /* WDZCallTraceTimeCostModel.m */,
-				AA4A31A425110D8700171D92 /* WDZCPUMonitor.h */,
-				AA4A319B25110D8600171D92 /* WDZCPUMonitor.m */,
-				AA4A319E25110D8700171D92 /* WDZLagMonitor.h */,
-				AA4A31A925110D8700171D92 /* WDZLagMonitor.m */,
-				AA4A31C825110DC900171D92 /* DKCallStackModel.h */,
-				AA4A31C925110DC900171D92 /* DKCallStackModel.m */,
-				AA4A31CB25110E1E00171D92 /* DKCallTraceTimeCostModel.h */,
-				AA4A31CC25110E1E00171D92 /* DKCallTraceTimeCostModel.m */,
-			);
-			path = Monitor;
-			sourceTree = "<group>";
-		};
-		AA4A31AA25110D8700171D92 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				AA4A31B225110D8700171D92 /* WDZClsCallCell.h */,
-				AA4A31AC25110D8700171D92 /* WDZClsCallCell.m */,
-				AA4A31AE25110D8700171D92 /* WDZClsCallViewController.h */,
-				AA4A31B025110D8700171D92 /* WDZClsCallViewController.m */,
-				AA4A31AD25110D8700171D92 /* WDZStackCell.h */,
-				AA4A31B125110D8700171D92 /* WDZStackCell.m */,
-				AA4A31AF25110D8700171D92 /* WDZStackViewController.h */,
-				AA4A31AB25110D8700171D92 /* WDZStackViewController.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		AA4A31B325110D8700171D92 /* Hook */ = {
-			isa = PBXGroup;
-			children = (
-				AA4A31B725110D8700171D92 /* DCHook.h */,
-				AA4A31B525110D8700171D92 /* DCHook.m */,
-				AA4A31B425110D8700171D92 /* UIViewController+clsCall.h */,
-				AA4A31B625110D8700171D92 /* UIViewController+clsCall.m */,
-			);
-			path = Hook;
 			sourceTree = "<group>";
 		};
 		AAFFB81524FD1A430081A2B9 = {
@@ -705,7 +635,7 @@
 		D6579F2424FE23B000ED1C9F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				AA4A319425110D8600171D92 /* CPUMonitor */,
+				D69A403D2508DCAF00657CDA /* CPUMonitor */,
 				D6579F2524FE23B700ED1C9F /* Promise */,
 			);
 			path = Tool;
@@ -739,6 +669,71 @@
 				D6579F3224FE23B700ED1C9F /* DKPromiseHeader.h */,
 			);
 			path = Promise;
+			sourceTree = "<group>";
+		};
+		D665CEB9250B2233007D98D5 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				D665CEC1250B2233007D98D5 /* fishhook.c */,
+				D665CEC9250B2233007D98D5 /* fishhook.h */,
+				D665CEC5250B2233007D98D5 /* WDZCallDB.h */,
+				D665CEBD250B2233007D98D5 /* WDZCallDB.m */,
+				D665CEBC250B2233007D98D5 /* WDZCallLib.h */,
+				D665CEC6250B2233007D98D5 /* WDZCallLib.m */,
+				D665CEBE250B2233007D98D5 /* WDZCallStack.h */,
+				D665CECB250B2233007D98D5 /* WDZCallStack.m */,
+				D665CEC7250B2233007D98D5 /* WDZCallStackModel.h */,
+				D665CEBB250B2233007D98D5 /* WDZCallStackModel.m */,
+				D665CEC3250B2233007D98D5 /* WDZCallTrace.h */,
+				D665CECC250B2233007D98D5 /* WDZCallTrace.m */,
+				D665CEC4250B2233007D98D5 /* WDZCallTraceCore.c */,
+				D665CEBA250B2233007D98D5 /* WDZCallTraceCore.h */,
+				D665CECA250B2233007D98D5 /* WDZCallTraceTimeCostModel.h */,
+				D665CEC0250B2233007D98D5 /* WDZCallTraceTimeCostModel.m */,
+				D665CEC8250B2233007D98D5 /* WDZCPUMonitor.h */,
+				D665CEBF250B2233007D98D5 /* WDZCPUMonitor.m */,
+				D665CEC2250B2233007D98D5 /* WDZLagMonitor.h */,
+				D665CECD250B2233007D98D5 /* WDZLagMonitor.m */,
+				D66FCB2125122EDE004BEFAC /* DKCallTraceCore.h */,
+				D66FCB2225122EDE004BEFAC /* DKCallTraceCore.c */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		D665CECE250B2233007D98D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D665CEE3250B3F37007D98D5 /* WDZClsCallCell.h */,
+				D665CEE2250B3F37007D98D5 /* WDZClsCallCell.m */,
+				D665CEDE250B3EF9007D98D5 /* WDZClsCallViewController.h */,
+				D665CEDC250B3EF9007D98D5 /* WDZClsCallViewController.m */,
+				D665CEDF250B3EF9007D98D5 /* WDZStackViewController.h */,
+				D665CEDD250B3EF9007D98D5 /* WDZStackViewController.m */,
+				D665CED9250B3E60007D98D5 /* WDZStackCell.h */,
+				D665CEDA250B3E60007D98D5 /* WDZStackCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D665D27B250B54B7007D98D5 /* Hook */ = {
+			isa = PBXGroup;
+			children = (
+				D665D27F250B54B7007D98D5 /* DCHook.h */,
+				D665D27D250B54B7007D98D5 /* DCHook.m */,
+				D665D27C250B54B7007D98D5 /* UIViewController+clsCall.h */,
+				D665D27E250B54B7007D98D5 /* UIViewController+clsCall.m */,
+			);
+			path = Hook;
+			sourceTree = "<group>";
+		};
+		D69A403D2508DCAF00657CDA /* CPUMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				D665D27B250B54B7007D98D5 /* Hook */,
+				D665CEB9250B2233007D98D5 /* Monitor */,
+				D665CECE250B2233007D98D5 /* View */,
+			);
+			path = CPUMonitor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -923,38 +918,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA4A31CA25110DC900171D92 /* DKCallStackModel.m in Sources */,
-				AA4A31BF25110D8700171D92 /* WDZCallStack.m in Sources */,
 				AAFFB82924FD1A430081A2B9 /* ViewController.m in Sources */,
-				AA4A31BC25110D8700171D92 /* fishhook.c in Sources */,
-				AA4A31C125110D8700171D92 /* WDZLagMonitor.m in Sources */,
+				D665CEE0250B3EF9007D98D5 /* WDZClsCallViewController.m in Sources */,
+				D665CECF250B2233007D98D5 /* WDZCallStackModel.m in Sources */,
+				D665CED4250B2233007D98D5 /* WDZCallTraceCore.c in Sources */,
+				D66FCB2325122EDE004BEFAC /* DKCallTraceCore.c in Sources */,
 				AAFFB82324FD1A430081A2B9 /* AppDelegate.m in Sources */,
 				D6579F3F24FE23B700ED1C9F /* DKPromise+Timeout.m in Sources */,
 				D6579F4224FE23B700ED1C9F /* DKPromise+Async.m in Sources */,
-				AA4A31CD25110E1E00171D92 /* DKCallTraceTimeCostModel.m in Sources */,
-				AA4A31C625110D8700171D92 /* DCHook.m in Sources */,
+				D665D280250B54B7007D98D5 /* DCHook.m in Sources */,
 				D6579F4424FE23B700ED1C9F /* DKPromise+Catch.m in Sources */,
-				AA4A31BE25110D8700171D92 /* WDZCallLib.m in Sources */,
+				D665CEDB250B3E60007D98D5 /* WDZStackCell.m in Sources */,
+				D665CED2250B2233007D98D5 /* WDZCallTraceTimeCostModel.m in Sources */,
+				D665CED7250B2233007D98D5 /* WDZCallTrace.m in Sources */,
 				D6579F4524FE23B700ED1C9F /* DKPromise+Do.m in Sources */,
+				D665CEE4250B3F37007D98D5 /* WDZClsCallCell.m in Sources */,
 				D6579F4724FE23B700ED1C9F /* DKPromise+Any.m in Sources */,
 				D6579F4124FE23B700ED1C9F /* DKPromise+All.m in Sources */,
-				AA4A31C525110D8700171D92 /* WDZStackCell.m in Sources */,
 				AAFFB83424FD1A440081A2B9 /* main.m in Sources */,
+				D665D281250B54B7007D98D5 /* UIViewController+clsCall.m in Sources */,
 				D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */,
 				D6579F3D24FE23B700ED1C9F /* DKPromise+Retry.m in Sources */,
-				AA4A31C725110D8700171D92 /* UIViewController+clsCall.m in Sources */,
-				AA4A31BD25110D8700171D92 /* WDZCallTraceCore.c in Sources */,
-				AA4A31B825110D8700171D92 /* WDZCallStackModel.m in Sources */,
-				AA4A31BA25110D8700171D92 /* WDZCPUMonitor.m in Sources */,
-				AA4A31C325110D8700171D92 /* WDZClsCallCell.m in Sources */,
+				D665CED6250B2233007D98D5 /* WDZCallStack.m in Sources */,
 				D6579F3E24FE23B700ED1C9F /* DKPromise+Delay.m in Sources */,
-				AA4A31B925110D8700171D92 /* WDZCallDB.m in Sources */,
-				AA4A31C025110D8700171D92 /* WDZCallTrace.m in Sources */,
-				AA4A31C225110D8700171D92 /* WDZStackViewController.m in Sources */,
-				AA4A31BB25110D8700171D92 /* WDZCallTraceTimeCostModel.m in Sources */,
+				D665CED3250B2233007D98D5 /* fishhook.c in Sources */,
+				D665CED8250B2233007D98D5 /* WDZLagMonitor.m in Sources */,
+				D665CED5250B2233007D98D5 /* WDZCallLib.m in Sources */,
 				D6579F4024FE23B700ED1C9F /* DKPromise+Always.m in Sources */,
-				AA4A31C425110D8700171D92 /* WDZClsCallViewController.m in Sources */,
+				D665CED0250B2233007D98D5 /* WDZCallDB.m in Sources */,
 				D6579F4324FE23B700ED1C9F /* DKPromise+Then.m in Sources */,
+				D665CEE1250B3EF9007D98D5 /* WDZStackViewController.m in Sources */,
+				D665CED1250B2233007D98D5 /* WDZCPUMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

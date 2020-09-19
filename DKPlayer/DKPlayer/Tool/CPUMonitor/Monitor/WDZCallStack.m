@@ -264,6 +264,9 @@ bool wdzDladdr(const uintptr_t address, Dl_info* const info){
     /*---------  Mach Header  ----------*/
     //根据image序号获取mach_header
     const struct mach_header* machHeader = _dyld_get_image_header(idx);
+    if (machHeader == NULL) {
+        return false;
+    }
     
     //获取镜像的虚拟内存地址slider的数量
     //动态连接器加载image时， image必须映射到未占用地址的进程的虚拟地址空间，动态连接器通过添加一个值带 image的基地址来实现，这个值就是虚拟内存slider数量

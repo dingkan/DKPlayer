@@ -39,6 +39,17 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)clearClsCallStackData;
 
 
+/**
+ 1.对objc_msgSend监听，在调用前后分别插入兼容代码
+    1.前push_call_record方法记录方法调用时间
+        - pthread_getspecific/pthread_setspecific 方法与线程的绑定 获取/绑定 该线程对应方法的私有数据 获取thread_call_stack自定义结构体（标识了调用方法的信息、方法名、方法类型、树深）线程中的函数调用栈
+        - 获取该线程的栈数据，并且扩展stack类型存储空间。记录当前方法的信息添加到stack中
+    2.后pop_call_record记录方法结束调用时间。返回下一个函数调用地址
+        - 获取当前线程的函数调用栈信息
+        - 获取当前的调用方法，判断该方法是否是在主线程并且开启记录。记录在格式化耗时记录数据上
+    
+ */
+
 @end
 
 NS_ASSUME_NONNULL_END

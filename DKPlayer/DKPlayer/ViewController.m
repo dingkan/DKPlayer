@@ -77,18 +77,17 @@
         
         typeof(self)wself = self;
         
-        [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-            [[wself.clsCallBt rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-                [subscriber sendNext:@"click"];
-            }];
-            return nil;
-        }] subscribeNext:^(id x) {
-            typeof(self) strongSelf = wself;
-            WDZClsCallViewController *vc = [[WDZClsCallViewController alloc] init];
-            [strongSelf presentViewController:vc animated:YES completion:nil];
-        }];
+        [_clsCallBt addTarget:self action:@selector(didClickCls) forControlEvents:UIControlEventTouchUpInside];
+        
     }
     return _clsCallBt;
 }
+
+-(void)didClickCls{
+
+    WDZClsCallViewController *vc = [[WDZClsCallViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
 
 @end
