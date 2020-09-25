@@ -153,6 +153,9 @@ uintptr_t after_objc_msgSend(){
     return pop_call_record();
 }
 
+//第一行和第三行是用来记录和回复x8,x9两个寄存器。
+//当使用汇编语言模板时，会用到x8,x9寄存器，因为他的下层实现是通过这些寄存器来做的，所以为了恢复之前的上下文，需要利用栈来保存一下x8,x9寄存器，在正式调用before_objc_msgSend方法之前将其恢复极客
+//% 代表指令操作数，也可以代表通用寄存器。第二行的意思是吧before_objc_msgSend地址取出然后放到x12寄存器
 #define call(b, value) \
 __asm volatile ("stp x8, x9, [sp, #-16]!\n"); \
 __asm volatile ("mov x12, %0\n" :: "r"(value)); \
@@ -187,9 +190,11 @@ __attribute__((__naked__))
 
 static void hook_objc_msgSend(){
     //保存{x0, x9};
+    //ldp,stp是ldr/str衍生指令，可以同时读/写2寄存器
     save()
     
     //交换参数
+    //更新参数， hook方法的入参前三个固定为 id , SEL, lr, 这里来更新参数位置
     __asm volatile ("mov x2, lr\n");
     __asm volatile ("mov x3, x4\n");
     
@@ -223,7 +228,9 @@ void wdzCallTraceStart(){
     _call_record_enable = YES;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        //创建绑定key
+        //通过pthread_key_create来创建线程私有数据
+        //参数一：该函数从TSD池中分配一项，将其地址赋值给key供访问使用
+        //参数二：销毁函数，可选，如果为NULL则系统调用默认的销毁函数进行数据注销。如果不为NULL，则在线程退出时（pthread_exit()）将以key关联的数据作为参数调用它，来释放分配的缓冲区
         pthread_key_create(&_thread_key, &release_thread_call_stack);
         rebind_symbols((struct rebinding[6]){
             "objc_msgSend",(void *)hook_objc_msgSend, (void **)&orig_objc_msgSend
