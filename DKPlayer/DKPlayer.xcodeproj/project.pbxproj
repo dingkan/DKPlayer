@@ -32,6 +32,7 @@
 		AAFFB90F24FD1AA60081A2B9 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E324FD1AA60081A2B9 /* libavdevice.a */; };
 		AAFFB91024FD1AA60081A2B9 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E424FD1AA60081A2B9 /* libswresample.a */; };
 		AAFFB91124FD1AA70081A2B9 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB8E524FD1AA60081A2B9 /* libswscale.a */; };
+		D650EB61259B45BC006D5DCF /* DKSDLGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = D650EB60259B45BC006D5DCF /* DKSDLGLView.m */; };
 		D6579F3D24FE23B700ED1C9F /* DKPromise+Retry.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2624FE23B700ED1C9F /* DKPromise+Retry.m */; };
 		D6579F3E24FE23B700ED1C9F /* DKPromise+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2924FE23B700ED1C9F /* DKPromise+Delay.m */; };
 		D6579F3F24FE23B700ED1C9F /* DKPromise+Timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F2B24FE23B700ED1C9F /* DKPromise+Timeout.m */; };
@@ -59,7 +60,6 @@
 		D665CEE4250B3F37007D98D5 /* WDZClsCallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEE2250B3F37007D98D5 /* WDZClsCallCell.m */; };
 		D665D280250B54B7007D98D5 /* DCHook.m in Sources */ = {isa = PBXBuildFile; fileRef = D665D27D250B54B7007D98D5 /* DCHook.m */; };
 		D665D281250B54B7007D98D5 /* UIViewController+clsCall.m in Sources */ = {isa = PBXBuildFile; fileRef = D665D27E250B54B7007D98D5 /* UIViewController+clsCall.m */; };
-		D66FCB2325122EDE004BEFAC /* DKCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = D66FCB2225122EDE004BEFAC /* DKCallTraceCore.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +230,10 @@
 		AAFFB8E524FD1AA60081A2B9 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
 		D457D1E4103795225FF01416 /* Pods-DKPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKPlayer.debug.xcconfig"; path = "Target Support Files/Pods-DKPlayer/Pods-DKPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		D61AF44873D316775FE07579 /* Pods-DKPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKPlayer.release.xcconfig"; path = "Target Support Files/Pods-DKPlayer/Pods-DKPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		D650EB5F259B45BC006D5DCF /* DKSDLGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSDLGLView.h; sourceTree = "<group>"; };
+		D650EB60259B45BC006D5DCF /* DKSDLGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKSDLGLView.m; sourceTree = "<group>"; };
+		D650EB62259B4662006D5DCF /* DKSDLGLViewPortocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKSDLGLViewPortocol.h; sourceTree = "<group>"; };
+		D650EB63259B496D006D5DCF /* dkSDK_gles2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dkSDK_gles2.h; sourceTree = "<group>"; };
 		D6579F2624FE23B700ED1C9F /* DKPromise+Retry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPromise+Retry.m"; sourceTree = "<group>"; };
 		D6579F2724FE23B700ED1C9F /* DKPromise+Catch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Catch.h"; sourceTree = "<group>"; };
 		D6579F2824FE23B700ED1C9F /* DKPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPromise.h; sourceTree = "<group>"; };
@@ -285,8 +289,6 @@
 		D665D27D250B54B7007D98D5 /* DCHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHook.m; sourceTree = "<group>"; };
 		D665D27E250B54B7007D98D5 /* UIViewController+clsCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+clsCall.m"; sourceTree = "<group>"; };
 		D665D27F250B54B7007D98D5 /* DCHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHook.h; sourceTree = "<group>"; };
-		D66FCB2125122EDE004BEFAC /* DKCallTraceCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCallTraceCore.h; sourceTree = "<group>"; };
-		D66FCB2225122EDE004BEFAC /* DKCallTraceCore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DKCallTraceCore.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +367,7 @@
 		AAFFB82024FD1A430081A2B9 /* DKPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				D650EB5E259B459F006D5DCF /* Render */,
 				D6579F2424FE23B000ED1C9F /* Tool */,
 				AAFFB85624FD1A8D0081A2B9 /* SDK */,
 				AAFFB82124FD1A430081A2B9 /* AppDelegate.h */,
@@ -632,6 +635,17 @@
 			path = pkgconfig;
 			sourceTree = "<group>";
 		};
+		D650EB5E259B459F006D5DCF /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				D650EB5F259B45BC006D5DCF /* DKSDLGLView.h */,
+				D650EB60259B45BC006D5DCF /* DKSDLGLView.m */,
+				D650EB62259B4662006D5DCF /* DKSDLGLViewPortocol.h */,
+				D650EB63259B496D006D5DCF /* dkSDK_gles2.h */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
 		D6579F2424FE23B000ED1C9F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -694,8 +708,6 @@
 				D665CEBF250B2233007D98D5 /* WDZCPUMonitor.m */,
 				D665CEC2250B2233007D98D5 /* WDZLagMonitor.h */,
 				D665CECD250B2233007D98D5 /* WDZLagMonitor.m */,
-				D66FCB2125122EDE004BEFAC /* DKCallTraceCore.h */,
-				D66FCB2225122EDE004BEFAC /* DKCallTraceCore.c */,
 			);
 			path = Monitor;
 			sourceTree = "<group>";
@@ -922,10 +934,10 @@
 				D665CEE0250B3EF9007D98D5 /* WDZClsCallViewController.m in Sources */,
 				D665CECF250B2233007D98D5 /* WDZCallStackModel.m in Sources */,
 				D665CED4250B2233007D98D5 /* WDZCallTraceCore.c in Sources */,
-				D66FCB2325122EDE004BEFAC /* DKCallTraceCore.c in Sources */,
 				AAFFB82324FD1A430081A2B9 /* AppDelegate.m in Sources */,
 				D6579F3F24FE23B700ED1C9F /* DKPromise+Timeout.m in Sources */,
 				D6579F4224FE23B700ED1C9F /* DKPromise+Async.m in Sources */,
+				D650EB61259B45BC006D5DCF /* DKSDLGLView.m in Sources */,
 				D665D280250B54B7007D98D5 /* DCHook.m in Sources */,
 				D6579F4424FE23B700ED1C9F /* DKPromise+Catch.m in Sources */,
 				D665CEDB250B3E60007D98D5 /* WDZStackCell.m in Sources */,
