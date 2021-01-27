@@ -44,6 +44,10 @@
 		D6579F4524FE23B700ED1C9F /* DKPromise+Do.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3424FE23B700ED1C9F /* DKPromise+Do.m */; };
 		D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3724FE23B700ED1C9F /* DKPromise.m */; };
 		D6579F4724FE23B700ED1C9F /* DKPromise+Any.m in Sources */ = {isa = PBXBuildFile; fileRef = D6579F3824FE23B700ED1C9F /* DKPromise+Any.m */; };
+		D65AF59425C1047B00754705 /* ff_player_PacketQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = D65AF59025C1047B00754705 /* ff_player_PacketQueue.c */; };
+		D65AF59525C1047B00754705 /* ff_player.c in Sources */ = {isa = PBXBuildFile; fileRef = D65AF59325C1047B00754705 /* ff_player.c */; };
+		D65AF59C25C10A4600754705 /* ff_mutex.c in Sources */ = {isa = PBXBuildFile; fileRef = D65AF59A25C10A4600754705 /* ff_mutex.c */; };
+		D65AF5A225C1411700754705 /* ff_player_Frame.c in Sources */ = {isa = PBXBuildFile; fileRef = D65AF5A125C1411700754705 /* ff_player_Frame.c */; };
 		D665CECF250B2233007D98D5 /* WDZCallStackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEBB250B2233007D98D5 /* WDZCallStackModel.m */; };
 		D665CED0250B2233007D98D5 /* WDZCallDB.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEBD250B2233007D98D5 /* WDZCallDB.m */; };
 		D665CED1250B2233007D98D5 /* WDZCPUMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D665CEBF250B2233007D98D5 /* WDZCPUMonitor.m */; };
@@ -257,6 +261,15 @@
 		D6579F3A24FE23B700ED1C9F /* DKPromise+Then.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Then.h"; sourceTree = "<group>"; };
 		D6579F3B24FE23B700ED1C9F /* DKPromise+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+Async.h"; sourceTree = "<group>"; };
 		D6579F3C24FE23B700ED1C9F /* DKPromise+All.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPromise+All.h"; sourceTree = "<group>"; };
+		D65AF59025C1047B00754705 /* ff_player_PacketQueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ff_player_PacketQueue.c; sourceTree = "<group>"; };
+		D65AF59125C1047B00754705 /* ff_player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ff_player.h; sourceTree = "<group>"; };
+		D65AF59225C1047B00754705 /* ff_player_PacketQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ff_player_PacketQueue.h; sourceTree = "<group>"; };
+		D65AF59325C1047B00754705 /* ff_player.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ff_player.c; sourceTree = "<group>"; };
+		D65AF59A25C10A4600754705 /* ff_mutex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ff_mutex.c; sourceTree = "<group>"; };
+		D65AF59B25C10A4600754705 /* ff_mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ff_mutex.h; sourceTree = "<group>"; };
+		D65AF59D25C10A5800754705 /* ff_misc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ff_misc.h; sourceTree = "<group>"; };
+		D65AF5A025C1411700754705 /* ff_player_Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ff_player_Frame.h; sourceTree = "<group>"; };
+		D65AF5A125C1411700754705 /* ff_player_Frame.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ff_player_Frame.c; sourceTree = "<group>"; };
 		D665CEBA250B2233007D98D5 /* WDZCallTraceCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallTraceCore.h; sourceTree = "<group>"; };
 		D665CEBB250B2233007D98D5 /* WDZCallStackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDZCallStackModel.m; sourceTree = "<group>"; };
 		D665CEBC250B2233007D98D5 /* WDZCallLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDZCallLib.h; sourceTree = "<group>"; };
@@ -404,6 +417,7 @@
 		AAFFB85624FD1A8D0081A2B9 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				D65AF58F25C1047B00754705 /* Player */,
 				AAFFB85724FD1AA60081A2B9 /* FFmpge */,
 			);
 			path = SDK;
@@ -685,6 +699,30 @@
 			path = Promise;
 			sourceTree = "<group>";
 		};
+		D65AF58F25C1047B00754705 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				D65AF59925C10A4600754705 /* SDL */,
+				D65AF59025C1047B00754705 /* ff_player_PacketQueue.c */,
+				D65AF59225C1047B00754705 /* ff_player_PacketQueue.h */,
+				D65AF5A025C1411700754705 /* ff_player_Frame.h */,
+				D65AF5A125C1411700754705 /* ff_player_Frame.c */,
+				D65AF59325C1047B00754705 /* ff_player.c */,
+				D65AF59125C1047B00754705 /* ff_player.h */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		D65AF59925C10A4600754705 /* SDL */ = {
+			isa = PBXGroup;
+			children = (
+				D65AF59A25C10A4600754705 /* ff_mutex.c */,
+				D65AF59B25C10A4600754705 /* ff_mutex.h */,
+				D65AF59D25C10A5800754705 /* ff_misc.h */,
+			);
+			path = SDL;
+			sourceTree = "<group>";
+		};
 		D665CEB9250B2233007D98D5 /* Monitor */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,12 +990,16 @@
 				D6579F4624FE23B700ED1C9F /* DKPromise.m in Sources */,
 				D6579F3D24FE23B700ED1C9F /* DKPromise+Retry.m in Sources */,
 				D665CED6250B2233007D98D5 /* WDZCallStack.m in Sources */,
+				D65AF59C25C10A4600754705 /* ff_mutex.c in Sources */,
+				D65AF59525C1047B00754705 /* ff_player.c in Sources */,
+				D65AF5A225C1411700754705 /* ff_player_Frame.c in Sources */,
 				D6579F3E24FE23B700ED1C9F /* DKPromise+Delay.m in Sources */,
 				D665CED3250B2233007D98D5 /* fishhook.c in Sources */,
 				D665CED8250B2233007D98D5 /* WDZLagMonitor.m in Sources */,
 				D665CED5250B2233007D98D5 /* WDZCallLib.m in Sources */,
 				D6579F4024FE23B700ED1C9F /* DKPromise+Always.m in Sources */,
 				D665CED0250B2233007D98D5 /* WDZCallDB.m in Sources */,
+				D65AF59425C1047B00754705 /* ff_player_PacketQueue.c in Sources */,
 				D6579F4324FE23B700ED1C9F /* DKPromise+Then.m in Sources */,
 				D665CEE1250B3EF9007D98D5 /* WDZStackViewController.m in Sources */,
 				D665CED1250B2233007D98D5 /* WDZCPUMonitor.m in Sources */,
@@ -1132,6 +1174,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTGQCB5B3L;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FMDB/FMDB.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh/MJRefresh.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactiveCocoa/ReactiveCocoa.framework/Headers\"",
+					/Users/dingkan/DKPlayer1/DKPlayer/DKPlayer/SDK/FFmpge/include,
+				);
 				INFOPLIST_FILE = DKPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
